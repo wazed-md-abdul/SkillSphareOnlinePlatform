@@ -1,26 +1,83 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+@import "tailwindcss";
+
+@theme {
+  --color-tertiary-fixed: #ffe083;
+  --color-primary-container: #98ffd9;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-on-primary-container: #00785c;
+  --color-primary: #006c52;
+  --color-on-primary-fixed-variant: #00513d;
+  --color-secondary: #5f5e5e;
+  --color-inverse-on-surface: #f0f1f2;
+  --color-error-container: #ffdad6;
+  --color-surface-bright: #f8f9fa;
+  --color-on-surface-variant: #3e4944;
+  --color-secondary-fixed: #e5e2e1;
+  --color-on-primary-fixed: #002117;
+  --color-surface-tint: #006c52;
+  --color-surface-dim: #d9dadb;
+  --color-tertiary-fixed-dim: #eec200;
+  --color-primary-fixed: #8ff6d0;
+  --color-outline: #6e7a74;
+  --color-on-background: #191c1d;
+  --color-on-secondary-fixed-variant: #474646;
+  --color-on-error-container: #93000a;
+  --color-inverse-primary: #73d9b5;
+  --color-on-primary: #ffffff;
+  --color-surface-container-highest: #e1e3e4;
+  --color-primary-fixed-dim: #73d9b5;
+  --color-secondary-container: #e5e2e1;
+  --color-outline-variant: #bdc9c2;
+  --color-tertiary-container: #ffeab1;
+  --color-on-tertiary-fixed-variant: #574500;
+  --color-on-secondary-container: #656464;
+  --color-error: #ba1a1a;
+  --color-on-surface: #191c1d;
+  --color-secondary-fixed-dim: #c8c6c5;
+  --color-tertiary: #735c00;
+  --color-on-tertiary-fixed: #231b00;
+  --color-surface: #f8f9fa;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-inverse-surface: #2e3132;
+  --color-on-error: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-on-tertiary-container: #806700;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-variant: #e1e3e4;
+  --color-background: #f8f9fa;
+
+  --font-headline: var(--font-plus-jakarta-sans), sans-serif;
+  --font-display: var(--font-plus-jakarta-sans), sans-serif;
+  --font-body: var(--font-manrope), sans-serif;
+  --font-label: var(--font-plus-jakarta-sans), sans-serif;
+
+  --radius-DEFAULT: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-surface font-body text-on-surface antialiased;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+  }
+  .ambient-shadow {
+    box-shadow: 0px 20px 40px rgba(25, 28, 29, 0.06);
+  }
+  .ghost-border {
+    border: 1px solid rgba(189, 201, 194, 0.15);
+  }
 }
+
