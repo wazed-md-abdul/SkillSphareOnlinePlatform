@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const FeatureCard = ({ icon, title, description }) => (
@@ -29,13 +30,13 @@ const Hero = () => {
             Experience a curated studio for high-end digital mastery. Connect with industry experts and join a community of 50k+ learners redefining the future of tech.
           </p>
           <div className="flex flex-wrap gap-4">
-            <button className="bg-on-surface text-tertiary-fixed font-headline px-8 py-4 rounded-full font-bold text-lg shadow-[0px_20px_40px_rgba(25,28,29,0.15)] hover:shadow-none transition-all duration-500 flex items-center gap-3 active:scale-95 cursor-pointer">
+            <Link href="/register" className="bg-on-surface text-tertiary-fixed font-headline px-8 py-4 rounded-full font-bold text-lg shadow-[0px_20px_40px_rgba(25,28,29,0.15)] hover:shadow-none transition-all duration-500 flex items-center gap-3 active:scale-95 cursor-pointer">
               Get Started
               <span className="material-symbols-outlined">arrow_forward</span>
-            </button>
-            <button className="bg-primary-container text-on-primary-container font-headline px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-container/80 transition-all duration-300 active:scale-95 cursor-pointer">
+            </Link>
+            <Link href="/allcourses" className="bg-primary-container text-on-primary-container font-headline px-8 py-4 rounded-full font-bold text-lg hover:bg-primary-container/80 transition-all duration-300 active:scale-95 cursor-pointer">
               Explore Courses
-            </button>
+            </Link>
           </div>
           <div className="mt-16 flex items-center gap-12">
             <div>

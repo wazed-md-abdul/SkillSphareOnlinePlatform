@@ -1,7 +1,9 @@
+import { getAllCourses } from '@/lib/data';
 import Link from 'next/link';
 import React from 'react';
 
 const CourseCard = ({ course,id }) => {
+ 
   return (
     <div className="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-500 hover:shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
       <div className="aspect-video mb-6 overflow-hidden rounded-lg">
@@ -11,19 +13,8 @@ const CourseCard = ({ course,id }) => {
           src={course.image} 
         />
       </div>
-      <div className="flex items-center gap-2 mb-4">
-        {course.categories.map((cat, index) => (
-          <span 
-            key={index} 
-            className={`text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full ${
-              cat.type === 'primary' ? 'text-on-primary-container bg-primary-container' : 
-              cat.type === 'tertiary' ? 'text-tertiary bg-tertiary-container' : 
-              'text-on-secondary-fixed-variant bg-secondary-fixed'
-            }`}
-          >
-            {cat.label}
-          </span>
-        ))}
+      <div className="flex items-center text-on-primary-container bg-primary-container gap-2 mb-4">
+        {course.category}
       </div>
       <h3 className="text-2xl font-bold font-headline mb-2 leading-tight group-hover:text-primary transition-colors">
         {course.title}
@@ -32,7 +23,7 @@ const CourseCard = ({ course,id }) => {
         {course.description}
       </p>
       <div className="flex items-center gap-3 mb-8">
-        <img className="w-10 h-10 rounded-full object-cover" alt={course.instructor.name} src={course.instructor.avatar} />
+        <img className="w-10 h-10 rounded-full object-cover" alt={course.name} src={course.authorAvatar} />
         <div>
           <p className="text-xs font-bold font-headline text-on-surface">{course.instructor.name}</p>
           <p className="text-[10px] text-outline font-body">{course.instructor.role}</p>
