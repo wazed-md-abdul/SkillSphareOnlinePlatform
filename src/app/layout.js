@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Plus_Jakarta_Sans, Manrope } from "next/font/google";
 import "./globals.css";
 import PillNavbar from "@/components/shared/Navbar";
+import Background from "@/components/shared/Background";
+import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,10 +40,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body  className="min-h-full flex flex-col bg-[#F6F6F6]">
+      <body  className="min-h-full min-w-0 flex flex-col overflow-x-clip">
+        
+       
         <PillNavbar />
         {children}
-
+        <Footer />
 
       </body>
     </html>

@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 
-@import "tailwindcss";
-
 @theme {
   --color-tertiary-fixed: #ffe083;
   --color-primary-container: #98ffd9;
@@ -62,6 +60,12 @@
 }
 
 @layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
   body {
     @apply bg-surface font-body text-on-surface antialiased;
   }
@@ -80,4 +84,3 @@
     border: 1px solid rgba(189, 201, 194, 0.15);
   }
 }
-

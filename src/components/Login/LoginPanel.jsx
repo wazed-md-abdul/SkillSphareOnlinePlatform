@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import React from 'react';
 
 const LoginPanel = () => {
@@ -105,9 +106,9 @@ const LoginPanel = () => {
 
           <p className="font-body text-sm text-on-surface-variant text-center leading-relaxed">
             New to SkillSphare?
-            <a className="text-primary font-bold hover:underline decoration-primary/30 underline-offset-4 ml-1" href="#">
+            <Link href="/register" className="text-primary font-bold hover:underline decoration-primary/30 underline-offset-4 ml-1">
               Create Account
-            </a>
+            </Link>
           </p>
         </div>
       </div>
