@@ -35,7 +35,7 @@ export default function PillNavbar() {
                     </Link>
 
                     {/* Nav items */}
-                    <div className="hidden items-center gap-[2px] rounded-full bg-[#A2D5C6] p-1 md:flex">
+                    <div className="hidden items-center gap-[2px] rounded-full bg-primary-container p-1 md:flex">
                         {navItems.map((item) => (
                             <Link
                                 href={item.href}

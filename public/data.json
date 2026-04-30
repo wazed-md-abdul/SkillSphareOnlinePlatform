@@ -1,0 +1,122 @@
+[
+  {
+    "category": "Design Strategy",
+    "title": "Visual Systems & Brand Architecture",
+    "author": "Elena Lysander",
+    "authorInitial": "EL",
+    "authorBg": "bg-primary-container text-primary",
+    "rating": 4.9,
+    "duration": "120 hours",
+    "description": "Master the art of building cohesive visual systems and scalable brand architectures that communicate across every touchpoint.",
+    "level": "Intermediate",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpgbGknM6mKYnsvae9umHykhy0A6C-CgbTBTifIY74T5GXskgZqUy3--HR2dkvwHTnGX5mbRdBIxjPwiVlxxhJzN984lNewJjZ38R1kAszuuKM3ekdYpCSEZHVOpDpmId35YW6nqr0P-TfGG0JzfohFlUR7KRNA20sHBv4KwkY-IdrIYm20vf_PHO3j_f_5rO8f2RaUmTkLTo2T2ZBUqsMeLu4UAbSrCcDLdAQISMWg1jTCLkCcP-YTAmhpNZM5uthjIPtCxJQJxPM"
+  },
+  {
+    "category": "Engineering",
+    "title": "Scalable Frontend Architecture",
+    "author": "Julian Marks",
+    "authorInitial": "JM",
+    "authorBg": "bg-secondary-container text-on-secondary-container",
+    "rating": 4.8,
+    "duration": "160 hours",
+    "description": "Deep dive into modern frontend patterns, component systems, and performance optimization strategies for large-scale applications.",
+    "level": "Advanced",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAkwodOmstw9CjadzCK55dHhE_FT4kEgK9ib96RDvyb3BsxlXmZAcIBGsuP_Z7ORQRe0L55Pz-rIPQ66xKXvMTpTDCgGl87xlOYMtSDl0szpxXcE2gBc4Sl8B5VGp18hv5wmYeDeyoxGxlwp5LMcgb21ufWoW3jrvRNDve4Dj7TEfPcgZxTwMUSOFzDbtSqxF4Mw7D5zQ4XzkejZkI1I4nGp3m4fq_1UATa58qfFHvUsgqa1Hwl5BMrzKbIarVVZXqOBK1oZLcMfwAU"
+  },
+  {
+    "category": "Creative Mindset",
+    "title": "The Psychology of Interaction",
+    "author": "Sarah Vance",
+    "authorInitial": "SV",
+    "authorBg": "bg-tertiary-container text-on-tertiary-container",
+    "rating": 5.0,
+    "duration": "80 hours",
+    "description": "Explore the cognitive and emotional principles behind human-computer interaction and learn how to design experiences that feel effortless.",
+    "level": "Intermediate",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDE-rUNGf2j0riIqeXJpmjyGLo8MyT969efm5KYKxdvMnXPfiNH07h3j4TwkT4PHAlng496EEDr2uiQXHCgSq6geoSwqxpZUYQL6zaDWAjS9GV-SlkyQzk0VgEiWxdfALaICuprTfGoLfanS41kkuTuP5l0tSxA5fp2Svv09KVwtqCNjVC5YfaPzQ7vs48ZGoV-Y_Uf4ct9mfEhzbo2EWgwePwXFmfu9hGrO8lghCEsiyWRmqb2zvHyKhbwcOzch2wKFZ3X7sTSwnsa"
+  },
+  {
+    "category": "Engineering",
+    "title": "Full-Stack Web Development Bootcamp",
+    "author": "Marcus Chen",
+    "authorInitial": "MC",
+    "authorBg": "bg-primary-container text-primary",
+    "rating": 4.7,
+    "duration": "200 hours",
+    "description": "Learn full-stack web development from scratch. Build real-world projects using HTML, CSS, JavaScript, Node.js, and databases.",
+    "level": "Beginner",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpgbGknM6mKYnsvae9umHykhy0A6C-CgbTBTifIY74T5GXskgZqUy3--HR2dkvwHTnGX5mbRdBIxjPwiVlxxhJzN984lNewJjZ38R1kAszuuKM3ekdYpCSEZHVOpDpmId35YW6nqr0P-TfGG0JzfohFlUR7KRNA20sHBv4KwkY-IdrIYm20vf_PHO3j_f_5rO8f2RaUmTkLTo2T2ZBUqsMeLu4UAbSrCcDLdAQISMWg1jTCLkCcP-YTAmhpNZM5uthjIPtCxJQJxPM"
+  },
+  {
+    "category": "Data Science",
+    "title": "Machine Learning Foundations",
+    "author": "Priya Nair",
+    "authorInitial": "PN",
+    "authorBg": "bg-secondary-container text-on-secondary-container",
+    "rating": 4.9,
+    "duration": "180 hours",
+    "description": "Grasp the core concepts of machine learning, from supervised and unsupervised algorithms to model evaluation and deployment pipelines.",
+    "level": "Intermediate",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAkwodOmstw9CjadzCK55dHhE_FT4kEgK9ib96RDvyb3BsxlXmZAcIBGsuP_Z7ORQRe0L55Pz-rIPQ66xKXvMTpTDCgGl87xlOYMtSDl0szpxXcE2gBc4Sl8B5VGp18hv5wmYeDeyoxGxlwp5LMcgb21ufWoW3jrvRNDve4Dj7TEfPcgZxTwMUSOFzDbtSqxF4Mw7D5zQ4XzkejZkI1I4nGp3m4fq_1UATa58qfFHvUsgqa1Hwl5BMrzKbIarVVZXqOBK1oZLcMfwAU"
+  },
+  {
+    "category": "Product Management",
+    "title": "Product Thinking & Roadmapping",
+    "author": "Liam Okafor",
+    "authorInitial": "LO",
+    "authorBg": "bg-tertiary-container text-on-tertiary-container",
+    "rating": 4.6,
+    "duration": "90 hours",
+    "description": "Develop product intuition, learn prioritization frameworks, and practice building roadmaps that align stakeholders and drive measurable outcomes.",
+    "level": "Intermediate",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDE-rUNGf2j0riIqeXJpmjyGLo8MyT969efm5KYKxdvMnXPfiNH07h3j4TwkT4PHAlng496EEDr2uiQXHCgSq6geoSwqxpZUYQL6zaDWAjS9GV-SlkyQzk0VgEiWxdfALaICuprTfGoLfanS41kkuTuP5l0tSxA5fp2Svv09KVwtqCNjVC5YfaPzQ7vs48ZGoV-Y_Uf4ct9mfEhzbo2EWgwePwXFmfu9hGrO8lghCEsiyWRmqb2zvHyKhbwcOzch2wKFZ3X7sTSwnsa"
+  },
+  {
+    "category": "UX Research",
+    "title": "User Research Methods & Synthesis",
+    "author": "Aiko Tanaka",
+    "authorInitial": "AT",
+    "authorBg": "bg-primary-container text-primary",
+    "rating": 4.8,
+    "duration": "110 hours",
+    "description": "Learn qualitative and quantitative research techniques — from user interviews to usability testing — and turn insights into actionable design decisions.",
+    "level": "Beginner",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpgbGknM6mKYnsvae9umHykhy0A6C-CgbTBTifIY74T5GXskgZqUy3--HR2dkvwHTnGX5mbRdBIxjPwiVlxxhJzN984lNewJjZ38R1kAszuuKM3ekdYpCSEZHVOpDpmId35YW6nqr0P-TfGG0JzfohFlUR7KRNA20sHBv4KwkY-IdrIYm20vf_PHO3j_f_5rO8f2RaUmTkLTo2T2ZBUqsMeLu4UAbSrCcDLdAQISMWg1jTCLkCcP-YTAmhpNZM5uthjIPtCxJQJxPM"
+  },
+  {
+    "category": "Engineering",
+    "title": "Cloud-Native DevOps & CI/CD",
+    "author": "Rodrigo Ferreira",
+    "authorInitial": "RF",
+    "authorBg": "bg-secondary-container text-on-secondary-container",
+    "rating": 4.7,
+    "duration": "140 hours",
+    "description": "Master Docker, Kubernetes, and modern CI/CD pipelines. Deploy, scale, and monitor cloud-native applications with confidence.",
+    "level": "Advanced",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuAkwodOmstw9CjadzCK55dHhE_FT4kEgK9ib96RDvyb3BsxlXmZAcIBGsuP_Z7ORQRe0L55Pz-rIPQ66xKXvMTpTDCgGl87xlOYMtSDl0szpxXcE2gBc4Sl8B5VGp18hv5wmYeDeyoxGxlwp5LMcgb21ufWoW3jrvRNDve4Dj7TEfPcgZxTwMUSOFzDbtSqxF4Mw7D5zQ4XzkejZkI1I4nGp3m4fq_1UATa58qfFHvUsgqa1Hwl5BMrzKbIarVVZXqOBK1oZLcMfwAU"
+  },
+  {
+    "category": "Creative Mindset",
+    "title": "Design Thinking for Innovators",
+    "author": "Nina Wolff",
+    "authorInitial": "NW",
+    "authorBg": "bg-tertiary-container text-on-tertiary-container",
+    "rating": 4.5,
+    "duration": "60 hours",
+    "description": "Apply the five stages of design thinking — empathize, define, ideate, prototype, and test — to solve complex real-world problems creatively.",
+    "level": "Beginner",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDE-rUNGf2j0riIqeXJpmjyGLo8MyT969efm5KYKxdvMnXPfiNH07h3j4TwkT4PHAlng496EEDr2uiQXHCgSq6geoSwqxpZUYQL6zaDWAjS9GV-SlkyQzk0VgEiWxdfALaICuprTfGoLfanS41kkuTuP5l0tSxA5fp2Svv09KVwtqCNjVC5YfaPzQ7vs48ZGoV-Y_Uf4ct9mfEhzbo2EWgwePwXFmfu9hGrO8lghCEsiyWRmqb2zvHyKhbwcOzch2wKFZ3X7sTSwnsa"
+  },
+  {
+    "category": "Data Science",
+    "title": "Data Visualization & Storytelling",
+    "author": "Ethan Brooks",
+    "authorInitial": "EB",
+    "authorBg": "bg-primary-container text-primary",
+    "rating": 4.6,
+    "duration": "75 hours",
+    "description": "Transform raw data into compelling narratives using tools like D3.js, Tableau, and Python. Learn to communicate insights that influence decisions.",
+    "level": "Beginner",
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpgbGknM6mKYnsvae9umHykhy0A6C-CgbTBTifIY74T5GXskgZqUy3--HR2dkvwHTnGX5mbRdBIxjPwiVlxxhJzN984lNewJjZ38R1kAszuuKM3ekdYpCSEZHVOpDpmId35YW6nqr0P-TfGG0JzfohFlUR7KRNA20sHBv4KwkY-IdrIYm20vf_PHO3j_f_5rO8f2RaUmTkLTo2T2ZBUqsMeLu4UAbSrCcDLdAQISMWg1jTCLkCcP-YTAmhpNZM5uthjIPtCxJQJxPM"
+  }
+]

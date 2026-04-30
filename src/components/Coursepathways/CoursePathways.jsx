@@ -50,7 +50,7 @@ const CoursePathways = () => {
         </div>
         <div className="flex items-center gap-4 bg-surface-container-low p-2 rounded-full">
           <button className="bg-primary text-on-primary px-6 py-3 rounded-full font-label font-bold text-sm shadow-lg shadow-primary/20 cursor-pointer">Trending</button>
-          <button className="text-on-surface-variant px-6 py-3 rounded-full font-label font-bold text-sm hover:bg-surface-container-high transition-colors cursor-pointer">Newest</button>
+
         </div>
       </div>
 

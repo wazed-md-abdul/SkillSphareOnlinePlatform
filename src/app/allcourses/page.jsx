@@ -133,13 +133,7 @@ export default function AllCourses() {
             <CourseCard key={index} course={course} />
           ))}
         </div>
-
-        <div className="mt-20 flex justify-center">
-          <button className="flex items-center gap-3 px-10 py-5 bg-surface-container-highest text-on-surface font-bold rounded-full hover:bg-primary-container transition-all">
-            Load More Courses
-            <span className="material-symbols-outlined">expand_more</span>
-          </button>
-        </div>
+        
       </main>
   
     </>
