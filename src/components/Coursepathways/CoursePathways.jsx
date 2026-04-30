@@ -1,37 +1,14 @@
 import React from 'react';
 import CourseCard from './CourseCard';
+import { getAllCourses } from '@/lib/data';
 
 
-const CoursePathways = () => {
-  const courses = [
-    {
-      category: "Design Strategy",
-      title: "Visual Systems & Brand Architecture",
-      author: "Elena Lysander",
-      authorInitial: "EL",
-      authorBg: "bg-primary-container text-primary",
-      rating: 4.9,
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCpgbGknM6mKYnsvae9umHykhy0A6C-CgbTBTifIY74T5GXskgZqUy3--HR2dkvwHTnGX5mbRdBIxjPwiVlxxhJzN984lNewJjZ38R1kAszuuKM3ekdYpCSEZHVOpDpmId35YW6nqr0P-TfGG0JzfohFlUR7KRNA20sHBv4KwkY-IdrIYm20vf_PHO3j_f_5rO8f2RaUmTkLTo2T2ZBUqsMeLu4UAbSrCcDLdAQISMWg1jTCLkCcP-YTAmhpNZM5uthjIPtCxJQJxPM"
-    },
-    {
-      category: "Engineering",
-      title: "Scalable Frontend Architecture",
-      author: "Julian Marks",
-      authorInitial: "JM",
-      authorBg: "bg-secondary-container text-on-secondary-container",
-      rating: 4.8,
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuAkwodOmstw9CjadzCK55dHhE_FT4kEgK9ib96RDvyb3BsxlXmZAcIBGsuP_Z7ORQRe0L55Pz-rIPQ66xKXvMTpTDCgGl87xlOYMtSDl0szpxXcE2gBc4Sl8B5VGp18hv5wmYeDeyoxGxlwp5LMcgb21ufWoW3jrvRNDve4Dj7TEfPcgZxTwMUSOFzDbtSqxF4Mw7D5zQ4XzkejZkI1I4nGp3m4fq_1UATa58qfFHvUsgqa1Hwl5BMrzKbIarVVZXqOBK1oZLcMfwAU"
-    },
-    {
-      category: "Creative Mindset",
-      title: "The Psychology of Interaction",
-      author: "Sarah Vance",
-      authorInitial: "SV",
-      authorBg: "bg-tertiary-container text-on-tertiary-container",
-      rating: 5.0,
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDE-rUNGf2j0riIqeXJpmjyGLo8MyT969efm5KYKxdvMnXPfiNH07h3j4TwkT4PHAlng496EEDr2uiQXHCgSq6geoSwqxpZUYQL6zaDWAjS9GV-SlkyQzk0VgEiWxdfALaICuprTfGoLfanS41kkuTuP5l0tSxA5fp2Svv09KVwtqCNjVC5YfaPzQ7vs48ZGoV-Y_Uf4ct9mfEhzbo2EWgwePwXFmfu9hGrO8lghCEsiyWRmqb2zvHyKhbwcOzch2wKFZ3X7sTSwnsa"
-    }
-  ];
+const CoursePathways = async () => {
+const allcourses = await getAllCourses();
+  const courses = allcourses?.data || [];
+  const fillteredCourses = courses.filter((course)=> course.rating >= 4.9);
+
+  
 
   return (
     <main className="max-w-7xl mx-auto px-8 py-20 min-h-screen relative overflow-hidden">
@@ -56,8 +33,8 @@ const CoursePathways = () => {
 
       {/* Course Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
-        {courses.map((course, idx) => (
-          <CourseCard key={idx} {...course} />
+        {fillteredCourses.map((courses, idx) => (
+          <CourseCard key={idx} courses={courses} />
         ))}
       </div>
 

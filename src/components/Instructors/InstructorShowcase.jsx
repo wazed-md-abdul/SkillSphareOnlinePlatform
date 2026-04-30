@@ -1,36 +1,14 @@
 import React from 'react';
 import InstructorCard from './InstructorCard';
 import Link from 'next/link';
+import { getAllCourses } from '@/lib/data';
 
 
 
-const InstructorShowcase = () => {
-  const instructors = [
-    {
-      name: "Dr. Elena Vance",
-      role: "UX Architecture",
-      rating: "4.9",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDhbBSxFKRP9Qs9uBHT5Q2lqjFJT0A4p-7PF0E50-AX1vKPAEJICQzpQ6gelWbQ_b-nzX5jU_eclisMy3bqATXBb4qLN64tOAxLMSgAbousNU27xuz6xquyX4eMGWdvdggSDUZEn7-m26QZqOi3wydiR8th4KT2ICv19w5O4USXsjB1x6gKe8J-dBnSbkjj55bOZM0Y1bSGaty8eIgE7J41Ytv2COA4c21Z_PMuM2mCwu0LnFr0fhzjzYZ84ou5Ms-fLMbLhHfvP20t"
-    },
-    {
-      name: "Marcus Thorne",
-      role: "Visual Strategy",
-      rating: "4.8",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuDWLN0VrMlIZAroINx73vYpSU3IRpaSp_M_G8bnP0BW1e1QQvNWBvNHL47Um998K4Ch4Qb1XkXXWDEeN1HqYD6sHorbUaaWSo748ccDhoFOLiAOeSo1g77EGWVrVc17KKbJTmysgVwC_QbK7TxK_U1f66JfDu-ZiD8ZF2cOd_xmpu8mZt6djzYJhH2sI4BnEepsmTsuXnIKJ3-fjNpaz4dTz0Lhe7t8NsdZYRD2JZgEZzdbUl4F_k8bbrJnkwEzCBgYWsjAF1a-CnFr"
-    },
-    {
-      name: "Aria Chen",
-      role: "Frontend Craft",
-      rating: "5.0",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCCyfqt_OYAFLmD4eiFoXm07GD0kG7_RfVNngWd9neoJLJIVOzypEelzfAuvEEkkiO9iM8m3kIAI6MGfstq1OqV8UGHmP-zDWV82JqyCjtrOKY9Jn-9A7uI1Tr1p62zth2kjLNO0PiWmUO7iOeSpwgv9yFpoWYWGuFmKr7g7FlUcfSmetMqhBOAumtnHw2BNBzKfdCyKHLhQDBZXHk23bQifmWpUl-H0nQEg19jW_8XZi_I0g2d29BjjBtZEAaeOb9TscrTQFNeM5tN"
-    },
-    {
-      name: "Julian Brooks",
-      role: "Product Thinking",
-      rating: "4.7",
-      imageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBgpk3PwC69-V7s5rI5ErcsfFm-Ynr0WLJ4pydJquuGqVARGrVwj7m53Hwdptaznoi7GV3j_Lpn7Bu8gBFc0JONzYyeRIPmAvVzzqe8VlC8sXLNmuaeZ5JySuaNgYuzzJN7LUw2M0TIApU7KFj_k_lyXURhQ__193k3bEH5wX85AgbaNucMPvMgAL80mjJCPz04Ir0hsveyTTa2zvuOH7c3V8Ym1zvQxqP55G403A0K2TV6pZEzP3dxZVf3WjzPEINtaT3IUBM7xx5N"
-    }
-  ];
+const InstructorShowcase = async () => {
+ const courses = await getAllCourses();
+  const instructors = courses?.data || [];
+  const fillteredInstructors = instructors.slice(0, 4);
 
   return (
     <main className="max-w-7xl mx-auto px-6 py-20 min-h-screen">
@@ -50,8 +28,8 @@ const InstructorShowcase = () => {
 
       {/* Instructor Showcase Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {instructors.map((inst, index) => (
-          <InstructorCard key={index} {...inst} />
+        {fillteredInstructors.map((inst, index) => (
+          <InstructorCard key={index} inst={inst} />
         ))}
       </div>
 

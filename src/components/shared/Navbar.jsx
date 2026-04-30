@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { name: "Home", href: "/" },
   { name: "All Courses", href: "/allcourses" },
-  { name: "My Courses", href: "/my-courses" },
   { name: "My Profile", href: "/profile" },
 ];
 

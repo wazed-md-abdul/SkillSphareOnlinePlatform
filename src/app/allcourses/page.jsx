@@ -4,7 +4,7 @@ import { getAllCourses } from "@/lib/data";
 
 export default async function AllCourses() {
   const allcourses = await getAllCourses();
-  const courses = allcourses?.allCourses || [];
+  const courses = allcourses?.data || [];
   
 
   return (
@@ -13,7 +13,7 @@ export default async function AllCourses() {
       <main className="max-w-[1440px] mx-auto px-8 pt-12 pb-24">
         <header className="mb-16">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter font-headline text-on-background mb-4">
-            The Course Atelier
+            Explore Our Curated Catalog of Masterclasses
           </h1>
           <p className="text-xl text-on-surface-variant max-w-2xl font-body">
             Curated learning experiences designed for the next generation of creative professionals.

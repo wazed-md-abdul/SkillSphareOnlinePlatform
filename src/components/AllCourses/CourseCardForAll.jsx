@@ -2,7 +2,7 @@ import { getAllCourses } from '@/lib/data';
 import Link from 'next/link';
 import React from 'react';
 
-const CourseCard = ({ course,id }) => {
+const CourseCard = ({ course }) => {
  
   return (
     <>
@@ -31,15 +31,14 @@ const CourseCard = ({ course,id }) => {
         </div>
       </div>
       <div className="flex items-center justify-between pt-6 border-t border-surface-container-high">
-        <div className="text-2xl font-black text-on-surface">000</div>
-        <Link href={`/details/${id}`} className="px-6 py-3 bg-on-surface text-tertiary-fixed rounded-full font-bold text-sm scale-95 active:scale-90 transition-transform">
-          Details
+        <div className="text-2xl font-black text-on-surface">${course.price}</div>
+        <Link href={`/details/${course.id}`} className="px-6 py-3 bg-on-surface text-tertiary-fixed rounded-full font-bold text-sm scale-95 active:scale-90 transition-transform">
+          View Details
         </Link>
       </div>
     </div>
-
     </>
   );
 };
 
-export default CourseCard;
+export default CourseCard
