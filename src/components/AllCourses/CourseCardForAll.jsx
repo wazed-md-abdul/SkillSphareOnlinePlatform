@@ -5,7 +5,8 @@ import React from 'react';
 const CourseCard = ({ course,id }) => {
  
   return (
-    <div className="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-500 hover:shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
+    <>
+      {/* <div className="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-500 hover:shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
       <div className="aspect-video mb-6 overflow-hidden rounded-lg">
         <img 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -35,7 +36,9 @@ const CourseCard = ({ course,id }) => {
           Details
         </Link>
       </div>
-    </div>
+    </div> */}
+
+    </>
   );
 };
 
