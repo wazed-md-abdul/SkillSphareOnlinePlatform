@@ -1,4 +1,6 @@
- const CourseCard = ({ category, title, author, authorInitial, rating, imageUrl, authorBg }) => 
+import Link from "next/link";
+
+ const CourseCard = ({ category, title, author, authorInitial, rating, imageUrl, authorBg, id }) => 
  {
     return (
   <div className="group relative bg-surface-container-lowest rounded-xl p-6 shadow-[0px_20px_40px_rgba(25,28,29,0.06)] border border-outline-variant/10 transition-all duration-500 hover:-translate-y-2">
@@ -36,9 +38,9 @@
             </span>
           ))}
         </div>
-        <button className="bg-on-surface text-tertiary-fixed px-6 py-3 rounded-full font-label font-bold text-xs hover:opacity-90 active:scale-95 transition-all cursor-pointer">
+        <Link href={`/details/${id}`} className="bg-on-surface text-tertiary-fixed px-6 py-3 rounded-full font-label font-bold text-xs hover:opacity-90 active:scale-95 transition-all cursor-pointer">
           View Details
-        </button>
+        </Link>
       </div>
     </div>
   </div>

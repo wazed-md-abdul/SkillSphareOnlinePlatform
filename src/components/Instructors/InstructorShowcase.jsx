@@ -1,5 +1,6 @@
 import React from 'react';
 import InstructorCard from './InstructorCard';
+import Link from 'next/link';
 
 
 
@@ -36,7 +37,7 @@ const InstructorShowcase = () => {
       {/* Header Section */}
       <header className="mb-16">
         <div className="inline-block bg-primary-container text-on-primary-container font-label text-xs font-bold px-4 py-1.5 rounded-full mb-6 tracking-[0.1em]">
-          THE ATELIER ELITE
+          THE SKILLSPHARE ELITE
         </div>
         <h1 className="font-display text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface leading-[1.1]">
           World-Class Mentors <br />
@@ -65,12 +66,12 @@ const InstructorShowcase = () => {
             Our mentors don't just teach. They curate your growth, providing personalized feedback within our lucid studio framework.
           </p>
           <div className="flex flex-wrap gap-4 relative z-10">
-            <button className="bg-on-surface text-tertiary-fixed font-label font-bold px-8 py-3 rounded-full hover:shadow-xl transition-shadow cursor-pointer">
-              Join the Atelier
-            </button>
-            <button className="bg-white/30 backdrop-blur-md text-on-surface font-label font-bold px-8 py-3 rounded-full hover:bg-white/50 transition-colors cursor-pointer">
-              View All Experts
-            </button>
+            <Link href="/login" className="bg-on-surface text-tertiary-fixed font-label font-bold px-8 py-3 rounded-full hover:shadow-xl transition-shadow cursor-pointer">
+              LOGIN TO ENROLL
+            </Link>
+            <Link href="/allcourses" className="bg-white/30 backdrop-blur-md text-on-surface font-label font-bold px-8 py-3 rounded-full hover:bg-white/50 transition-colors cursor-pointer">
+              ALL COURSES
+            </Link>
           </div>
         </div>
         <div className="lg:col-span-5 bg-surface-container-low rounded-xl p-8 flex flex-col items-center justify-center text-center">

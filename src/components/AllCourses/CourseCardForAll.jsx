@@ -1,6 +1,7 @@
+import Link from 'next/link';
 import React from 'react';
 
-const CourseCard = ({ course }) => {
+const CourseCard = ({ course,id }) => {
   return (
     <div className="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-500 hover:shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
       <div className="aspect-video mb-6 overflow-hidden rounded-lg">
@@ -39,9 +40,9 @@ const CourseCard = ({ course }) => {
       </div>
       <div className="flex items-center justify-between pt-6 border-t border-surface-container-high">
         <div className="text-2xl font-black text-on-surface">${course.price}</div>
-        <button className="px-6 py-3 bg-on-surface text-tertiary-fixed rounded-full font-bold text-sm scale-95 active:scale-90 transition-transform">
+        <Link href={`/details/${id}`} className="px-6 py-3 bg-on-surface text-tertiary-fixed rounded-full font-bold text-sm scale-95 active:scale-90 transition-transform">
           Details
-        </button>
+        </Link>
       </div>
     </div>
   );

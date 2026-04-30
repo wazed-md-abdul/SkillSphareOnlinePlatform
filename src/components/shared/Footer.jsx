@@ -17,7 +17,7 @@ const Footer = () => {
           <a className="hover:text-[#735c00] transition-colors" href="#">Affiliate</a>
         </div>
         <div className="font-body text-sm text-[#191c1d]/70">
-          © 2024 SkillSphare Atelier. All rights reserved.
+          © 2024 SkillSphare. All rights reserved.
         </div>
       </div>
     </footer>

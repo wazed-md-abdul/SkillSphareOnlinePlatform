@@ -1,5 +1,10 @@
 
-export default function CourseDetails() {
+ const CourseDetails = async ({params}) => {
+    const {Id} = await params;
+
+    
+
+
   return (
     <>
       <main className="max-w-[1440px] mx-auto px-8 pt-12 transition-colors duration-300">
@@ -64,3 +69,4 @@ export default function CourseDetails() {
     </>
   );
 }
+export default CourseDetails;
