@@ -6,12 +6,12 @@
     "author": "Elena Lysander",
     "authorInitial": "EL",
     "authorBg": "bg-primary-container text-primary",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%234a1080'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%23e040fb' opacity='0.9'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%23e040fb' opacity='0.7'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/N6gD0CrP/elena.png",
     "rating": 4.9,
     "duration": "120 hours",
     "description": "Master the art of building cohesive visual systems and scalable brand architectures that communicate across every touchpoint.",
     "level": "Intermediate",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%231a1a2e'/%3E%3Crect x='40' y='40' width='140' height='100' rx='8' fill='%23e040fb' opacity='0.9'/%3E%3Crect x='60' y='60' width='140' height='100' rx='8' fill='%237c4dff' opacity='0.8'/%3E%3Crect x='80' y='80' width='140' height='100' rx='8' fill='%2340c4ff' opacity='0.7'/%3E%3Ccircle cx='300' cy='90' r='44' fill='none' stroke='%23e040fb' stroke-width='6'/%3E%3Ccircle cx='300' cy='90' r='28' fill='%23e040fb' opacity='0.3'/%3E%3Crect x='40' y='200' width='80' height='12' rx='6' fill='%23e040fb' opacity='0.7'/%3E%3Crect x='136' y='200' width='60' height='12' rx='6' fill='%237c4dff' opacity='0.7'/%3E%3Crect x='212' y='200' width='100' height='12' rx='6' fill='%2340c4ff' opacity='0.5'/%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/8C8X4LT/visual-systems.png"
   },
   {
     "id": "course-002",
@@ -20,12 +20,12 @@
     "author": "Julian Marks",
     "authorInitial": "JM",
     "authorBg": "bg-secondary-container text-on-secondary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23003545'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2300e5ff' opacity='0.9'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%2300bcd4' opacity='0.8'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/qLk4qFZG/julian.png",
     "rating": 4.8,
     "duration": "160 hours",
     "description": "Deep dive into modern frontend patterns, component systems, and performance optimization strategies for large-scale applications.",
     "level": "Advanced",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%230d1b2a'/%3E%3Crect x='20' y='60' width='56' height='140' rx='6' fill='%2300bcd4' opacity='0.8'/%3E%3Crect x='92' y='100' width='56' height='100' rx='6' fill='%2300bcd4' opacity='0.6'/%3E%3Crect x='164' y='40' width='56' height='160' rx='6' fill='%2300e5ff' opacity='0.9'/%3E%3Crect x='236' y='80' width='56' height='120' rx='6' fill='%2300bcd4' opacity='0.7'/%3E%3Crect x='308' y='30' width='56' height='170' rx='6' fill='%2300e5ff'/%3E%3Cpolyline points='48,110 120,144 192,60 264,100 336,40' fill='none' stroke='%23f50057' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='48' cy='110' r='6' fill='%23f50057'/%3E%3Ccircle cx='120' cy='144' r='6' fill='%23f50057'/%3E%3Ccircle cx='192' cy='60' r='6' fill='%23f50057'/%3E%3Ccircle cx='264' cy='100' r='6' fill='%23f50057'/%3E%3Ccircle cx='336' cy='40' r='6' fill='%23f50057'/%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/cKRb46g6/frontend-arch.png"
   },
   {
     "id": "course-003",
@@ -34,12 +34,12 @@
     "author": "Sarah Vance",
     "authorInitial": "SV",
     "authorBg": "bg-tertiary-container text-on-tertiary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%233a0050'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%23ce93d8' opacity='0.95'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%239c27b0' opacity='0.8'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/FLj7Ymfv/sarah.png",
     "rating": 5.0,
     "duration": "80 hours",
     "description": "Explore the cognitive and emotional principles behind human-computer interaction and learn how to design experiences that feel effortless.",
     "level": "Intermediate",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%231a0533'/%3E%3Ccircle cx='200' cy='120' r='90' fill='none' stroke='%23ce93d8' stroke-width='3' opacity='0.4'/%3E%3Ccircle cx='200' cy='120' r='64' fill='none' stroke='%23ce93d8' stroke-width='3' opacity='0.6'/%3E%3Ccircle cx='200' cy='120' r='40' fill='%239c27b0' opacity='0.5'/%3E%3Ccircle cx='200' cy='120' r='18' fill='%23e040fb'/%3E%3Cline x1='200' y1='30' x2='200' y2='72' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3Cline x1='110' y1='74' x2='140' y2='94' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3Cline x1='290' y1='74' x2='260' y2='94' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3Cline x1='110' y1='166' x2='140' y2='146' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3Cline x1='290' y1='166' x2='260' y2='146' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3Cline x1='200' y1='210' x2='200' y2='168' stroke='%23ce93d8' stroke-width='3' opacity='0.8'/%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/CNpKPnL/the-psychology.png"
   },
   {
     "id": "course-004",
@@ -48,12 +48,12 @@
     "author": "Marcus Chen",
     "authorInitial": "MC",
     "authorBg": "bg-primary-container text-primary",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%230a1628'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2390caf9' opacity='0.9'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%231565c0' opacity='0.85'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/8L8L0SCH/marcus.png",
     "rating": 4.7,
     "duration": "200 hours",
     "description": "Learn full-stack web development from scratch. Build real-world projects using HTML, CSS, JavaScript, Node.js, and databases.",
     "level": "Beginner",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%230a1628'/%3E%3Crect x='40' y='40' width='320' height='180' rx='12' fill='%231565c0' opacity='0.4'/%3E%3Crect x='40' y='40' width='320' height='28' rx='8' fill='%231976d2' opacity='0.8'/%3E%3Ccircle cx='60' cy='54' r='6' fill='%23ef5350'/%3E%3Ccircle cx='80' cy='54' r='6' fill='%23ffb300'/%3E%3Ccircle cx='100' cy='54' r='6' fill='%2366bb6a'/%3E%3Ctext x='70' y='100' font-size='16' fill='%2390caf9' font-family='monospace'%3E%26lt%3Bhtml%26gt%3B%3C/text%3E%3Ctext x='90' y='124' font-size='16' fill='%2380cbc4' font-family='monospace'%3E%26lt%3Bbody%26gt%3B%3C/text%3E%3Ctext x='110' y='148' font-size='16' fill='%23a5d6a7' font-family='monospace'%3Econst app %3D {}%3C/text%3E%3Ctext x='110' y='172' font-size='16' fill='%23fff59d' font-family='monospace'%3Enpm install%3C/text%3E%3Ctext x='90' y='196' font-size='16' fill='%2380cbc4' font-family='monospace'%3E%26lt%3B/body%26gt%3B%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/sv1bGwBD/full-stack.png"
   },
   {
     "id": "course-005",
@@ -62,12 +62,12 @@
     "author": "Priya Nair",
     "authorInitial": "PN",
     "authorBg": "bg-secondary-container text-on-secondary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%230c1a0c'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2300e676' opacity='0.9'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%23388e3c' opacity='0.85'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/HfgqQmPg/priya.png",
     "rating": 4.9,
     "duration": "180 hours",
     "description": "Grasp the core concepts of machine learning, from supervised and unsupervised algorithms to model evaluation and deployment pipelines.",
     "level": "Intermediate",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%230c1a0c'/%3E%3Cellipse cx='200' cy='130' rx='150' ry='96' fill='none' stroke='%234caf50' stroke-width='2' opacity='0.3'/%3E%3Cellipse cx='200' cy='130' rx='110' ry='68' fill='none' stroke='%234caf50' stroke-width='2' opacity='0.5'/%3E%3Cellipse cx='200' cy='130' rx='70' ry='44' fill='none' stroke='%2366bb6a' stroke-width='3' opacity='0.7'/%3E%3Cellipse cx='200' cy='130' rx='32' ry='20' fill='%23388e3c'/%3E%3Cline x1='50' y1='130' x2='168' y2='130' stroke='%234caf50' stroke-width='2' opacity='0.6'/%3E%3Cline x1='232' y1='130' x2='350' y2='130' stroke='%234caf50' stroke-width='2' opacity='0.6'/%3E%3Cline x1='200' y1='34' x2='200' y2='86' stroke='%234caf50' stroke-width='2' opacity='0.6'/%3E%3Cline x1='200' y1='174' x2='200' y2='226' stroke='%234caf50' stroke-width='2' opacity='0.6'/%3E%3Ccircle cx='50' cy='130' r='8' fill='%2300e676'/%3E%3Ccircle cx='350' cy='130' r='8' fill='%2300e676'/%3E%3Ccircle cx='200' cy='34' r='8' fill='%2300e676'/%3E%3Ccircle cx='200' cy='226' r='8' fill='%2300e676'/%3E%3Ctext x='200' y='135' text-anchor='middle' font-size='16' fill='white' font-family='sans-serif'%3EML%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png"
   },
   {
     "id": "course-006",
@@ -76,12 +76,12 @@
     "author": "Liam Okafor",
     "authorInitial": "LO",
     "authorBg": "bg-tertiary-container text-on-tertiary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%231a1200'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%23ffb300' opacity='0.95'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%23ff6f00' opacity='0.8'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/0RzJrLs3/liam.png",
     "rating": 4.6,
     "duration": "90 hours",
     "description": "Develop product intuition, learn prioritization frameworks, and practice building roadmaps that align stakeholders and drive measurable outcomes.",
     "level": "Intermediate",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%231a1200'/%3E%3Crect x='40' y='50' width='320' height='160' rx='10' fill='%23ff8f00' opacity='0.1' stroke='%23ff8f00' stroke-width='2' opacity='0.4'/%3E%3Crect x='60' y='70' width='90' height='56' rx='6' fill='%23ff6f00' opacity='0.7'/%3E%3Crect x='60' y='140' width='90' height='56' rx='6' fill='%23f9a825' opacity='0.5'/%3E%3Crect x='164' y='70' width='90' height='56' rx='6' fill='%23f9a825' opacity='0.6'/%3E%3Crect x='164' y='140' width='90' height='56' rx='6' fill='%23ff8f00' opacity='0.4'/%3E%3Crect x='268' y='70' width='76' height='126' rx='6' fill='%23ffb300' opacity='0.8'/%3E%3Ctext x='105' y='102' text-anchor='middle' font-size='14' fill='white' font-family='sans-serif'%3EVision%3C/text%3E%3Ctext x='209' y='102' text-anchor='middle' font-size='14' fill='white' font-family='sans-serif'%3EStrategy%3C/text%3E%3Ctext x='306' y='136' text-anchor='middle' font-size='14' fill='white' font-family='sans-serif'%3ERoadmap%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/ym6MqvQh/product-management.png"
   },
   {
     "id": "course-007",
@@ -90,12 +90,12 @@
     "author": "Aiko Tanaka",
     "authorInitial": "AT",
     "authorBg": "bg-primary-container text-primary",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23001433'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2329b6f6' opacity='0.95'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%230d47a1' opacity='0.85'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/TqBtMd30/aiko.png",
     "rating": 4.8,
     "duration": "110 hours",
     "description": "Learn qualitative and quantitative research techniques — from user interviews to usability testing — and turn insights into actionable design decisions.",
     "level": "Beginner",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%23001433'/%3E%3Ccircle cx='200' cy='110' r='60' fill='none' stroke='%2329b6f6' stroke-width='4'/%3E%3Ccircle cx='200' cy='110' r='10' fill='%2329b6f6'/%3E%3Cline x1='200' y1='50' x2='200' y2='24' stroke='%2329b6f6' stroke-width='3'/%3E%3Cline x1='248' y1='68' x2='268' y2='48' stroke='%2329b6f6' stroke-width='3'/%3E%3Cline x1='260' y1='110' x2='286' y2='110' stroke='%2329b6f6' stroke-width='3'/%3E%3Cline x1='152' y1='68' x2='132' y2='48' stroke='%2329b6f6' stroke-width='3'/%3E%3Cline x1='140' y1='110' x2='114' y2='110' stroke='%2329b6f6' stroke-width='3'/%3E%3Crect x='60' y='190' width='280' height='36' rx='8' fill='%230d47a1' opacity='0.6'/%3E%3Crect x='64' y='194' width='80' height='28' rx='6' fill='%2329b6f6' opacity='0.8'/%3E%3Ctext x='104' y='212' text-anchor='middle' font-size='13' fill='white' font-family='sans-serif'%3EInterview%3C/text%3E%3Ctext x='220' y='212' text-anchor='middle' font-size='13' fill='%2329b6f6' font-family='sans-serif'%3ESynthesize%3C/text%3E%3Ctext x='310' y='212' text-anchor='middle' font-size='13' fill='%2329b6f6' font-family='sans-serif'%3EInsights%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/hRbcmtWR/reasearch.png"
   },
   {
     "id": "course-008",
@@ -104,12 +104,12 @@
     "author": "Rodrigo Ferreira",
     "authorInitial": "RF",
     "authorBg": "bg-secondary-container text-on-secondary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%230a0a0a'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2380cbc4' opacity='0.9'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%23263238' opacity='0.95'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/YwdJMkQ/rodrigo.png",
     "rating": 4.7,
     "duration": "140 hours",
     "description": "Master Docker, Kubernetes, and modern CI/CD pipelines. Deploy, scale, and monitor cloud-native applications with confidence.",
     "level": "Advanced",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%230a0a0a'/%3E%3Crect x='30' y='40' width='80' height='50' rx='6' fill='%23263238' stroke='%2337474f' stroke-width='2'/%3E%3Ctext x='70' y='70' text-anchor='middle' font-size='14' fill='%2380cbc4' font-family='monospace'%3EDocker%3C/text%3E%3Crect x='160' y='40' width='80' height='50' rx='6' fill='%23263238' stroke='%2337474f' stroke-width='2'/%3E%3Ctext x='200' y='70' text-anchor='middle' font-size='14' fill='%2380cbc4' font-family='monospace'%3EK8s%3C/text%3E%3Crect x='290' y='40' width='90' height='50' rx='6' fill='%23263238' stroke='%2337474f' stroke-width='2'/%3E%3Ctext x='335' y='70' text-anchor='middle' font-size='14' fill='%2380cbc4' font-family='monospace'%3ECI/CD%3C/text%3E%3Cline x1='110' y1='65' x2='160' y2='65' stroke='%2300e5ff' stroke-width='3'/%3E%3Cline x1='240' y1='65' x2='290' y2='65' stroke='%2300e5ff' stroke-width='3'/%3E%3Crect x='30' y='120' width='340' height='100' rx='8' fill='%23102027' stroke='%2337474f' stroke-width='2'/%3E%3Ctext x='50' y='150' font-size='13' fill='%234db6ac' font-family='monospace'%3E$ kubectl apply -f deploy.yaml%3C/text%3E%3Ctext x='50' y='174' font-size='13' fill='%2366bb6a' font-family='monospace'%3E%E2%9C%93 deployment scaled to 3 replicas%3C/text%3E%3Ctext x='50' y='198' font-size='13' fill='%2366bb6a' font-family='monospace'%3E%E2%9C%93 service/lb exposed on %3A443%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/QF9vnB1T/cloud-native.png"
   },
   {
     "id": "course-009",
@@ -118,12 +118,12 @@
     "author": "Nina Wolff",
     "authorInitial": "NW",
     "authorBg": "bg-tertiary-container text-on-tertiary-container",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%2312001f'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%23f06292' opacity='0.95'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%23ad1457' opacity='0.8'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/VcWf66fn/nina.png",
     "rating": 4.5,
     "duration": "60 hours",
     "description": "Apply the five stages of design thinking — empathize, define, ideate, prototype, and test — to solve complex real-world problems creatively.",
     "level": "Beginner",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%2312001f'/%3E%3Cpolygon points='200,30 236,110 324,110 256,160 280,240 200,192 120,240 144,160 76,110 164,110' fill='none' stroke='%23f06292' stroke-width='3' opacity='0.7'/%3E%3Cpolygon points='200,70 222,120 276,120 234,152 250,206 200,174 150,206 166,152 124,120 178,120' fill='%23ad1457' opacity='0.5'/%3E%3Ccircle cx='200' cy='130' r='20' fill='%23f06292'/%3E%3Ctext x='200' y='135' text-anchor='middle' font-size='13' fill='white' font-family='sans-serif'%3EDT%3C/text%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/kgKyXYXS/design-thinking.png"
   },
   {
     "id": "course-010",
@@ -132,11 +132,11 @@
     "author": "Ethan Brooks",
     "authorInitial": "EB",
     "authorBg": "bg-primary-container text-primary",
-    "authorAvatar": "data:image/svg+xml,%3Csvg viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='40' cy='40' r='40' fill='%230d1117'/%3E%3Ccircle cx='40' cy='32' r='14' fill='%2342a5f5' opacity='0.95'/%3E%3Cellipse cx='40' cy='68' rx='22' ry='18' fill='%231976d2' opacity='0.85'/%3E%3C/svg%3E",
+    "authorAvatar": "https://i.ibb.co/1GZ36QPR/ethan.png",
     "rating": 4.6,
     "duration": "75 hours",
     "description": "Transform raw data into compelling narratives using tools like D3.js, Tableau, and Python. Learn to communicate insights that influence decisions.",
     "level": "Beginner",
-    "imageUrl": "data:image/svg+xml,%3Csvg viewBox='0 0 400 260' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='260' fill='%230d1117'/%3E%3Crect x='30' y='180' width='40' height='60' rx='4' fill='%231976d2'/%3E%3Crect x='84' y='140' width='40' height='100' rx='4' fill='%2342a5f5'/%3E%3Crect x='138' y='100' width='40' height='140' rx='4' fill='%231976d2'/%3E%3Crect x='192' y='70' width='40' height='170' rx='4' fill='%2342a5f5'/%3E%3Crect x='246' y='110' width='40' height='130' rx='4' fill='%231976d2'/%3E%3Crect x='300' y='50' width='40' height='190' rx='4' fill='%2342a5f5'/%3E%3Cpolyline points='50,176 104,136 158,96 212,66 266,106 320,46' fill='none' stroke='%23ff7043' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='50' cy='176' r='6' fill='%23ff7043'/%3E%3Ccircle cx='104' cy='136' r='6' fill='%23ff7043'/%3E%3Ccircle cx='158' cy='96' r='6' fill='%23ff7043'/%3E%3Ccircle cx='212' cy='66' r='6' fill='%23ff7043'/%3E%3Ccircle cx='266' cy='106' r='6' fill='%23ff7043'/%3E%3Ccircle cx='320' cy='46' r='6' fill='%23ff7043'/%3E%3Cline x1='30' y1='240' x2='370' y2='240' stroke='%23555' stroke-width='1'/%3E%3C/svg%3E"
+    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png"
   }
 ]
