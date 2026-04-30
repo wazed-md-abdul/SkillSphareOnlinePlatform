@@ -3,8 +3,8 @@ import { getAllCourses } from "@/lib/data";
   
 
 export default async function AllCourses() {
-  const courses = await getAllCourses();
-  console.log(courses);
+  const allcourses = await getAllCourses();
+  const courses = allcourses?.allCourses || [];
   
 
   return (

@@ -1,4 +1,5 @@
-[
+{
+  "data":[
   {
     "id": "course-001",
     "category": "Design Strategy",
@@ -11,7 +12,8 @@
     "duration": "120 hours",
     "description": "Master the art of building cohesive visual systems and scalable brand architectures that communicate across every touchpoint.",
     "level": "Intermediate",
-    "imageUrl": "https://i.ibb.co/8C8X4LT/visual-systems.png"
+    "imageUrl": "https://i.ibb.co/8C8X4LT/visual-systems.png",
+    "price": 199
   },
   {
     "id": "course-002",
@@ -25,7 +27,8 @@
     "duration": "160 hours",
     "description": "Deep dive into modern frontend patterns, component systems, and performance optimization strategies for large-scale applications.",
     "level": "Advanced",
-    "imageUrl": "https://i.ibb.co/cKRb46g6/frontend-arch.png"
+    "imageUrl": "https://i.ibb.co/cKRb46g6/frontend-arch.png",
+    "price": 249
   },
   {
     "id": "course-003",
@@ -39,7 +42,8 @@
     "duration": "80 hours",
     "description": "Explore the cognitive and emotional principles behind human-computer interaction and learn how to design experiences that feel effortless.",
     "level": "Intermediate",
-    "imageUrl": "https://i.ibb.co/CNpKPnL/the-psychology.png"
+    "imageUrl": "https://i.ibb.co/CNpKPnL/the-psychology.png",
+    "price": 149
   },
   {
     "id": "course-004",
@@ -53,7 +57,8 @@
     "duration": "200 hours",
     "description": "Learn full-stack web development from scratch. Build real-world projects using HTML, CSS, JavaScript, Node.js, and databases.",
     "level": "Beginner",
-    "imageUrl": "https://i.ibb.co/sv1bGwBD/full-stack.png"
+    "imageUrl": "https://i.ibb.co/sv1bGwBD/full-stack.png",
+    "price": 299
   },
   {
     "id": "course-005",
@@ -67,7 +72,8 @@
     "duration": "180 hours",
     "description": "Grasp the core concepts of machine learning, from supervised and unsupervised algorithms to model evaluation and deployment pipelines.",
     "level": "Intermediate",
-    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png"
+    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png",
+    "price": 199
   },
   {
     "id": "course-006",
@@ -81,7 +87,8 @@
     "duration": "90 hours",
     "description": "Develop product intuition, learn prioritization frameworks, and practice building roadmaps that align stakeholders and drive measurable outcomes.",
     "level": "Intermediate",
-    "imageUrl": "https://i.ibb.co/ym6MqvQh/product-management.png"
+    "imageUrl": "https://i.ibb.co/ym6MqvQh/product-management.png",
+    "price": 179
   },
   {
     "id": "course-007",
@@ -95,7 +102,8 @@
     "duration": "110 hours",
     "description": "Learn qualitative and quantitative research techniques — from user interviews to usability testing — and turn insights into actionable design decisions.",
     "level": "Beginner",
-    "imageUrl": "https://i.ibb.co/hRbcmtWR/reasearch.png"
+    "imageUrl": "https://i.ibb.co/hRbcmtWR/reasearch.png",
+    "price": 159
   },
   {
     "id": "course-008",
@@ -109,7 +117,8 @@
     "duration": "140 hours",
     "description": "Master Docker, Kubernetes, and modern CI/CD pipelines. Deploy, scale, and monitor cloud-native applications with confidence.",
     "level": "Advanced",
-    "imageUrl": "https://i.ibb.co/QF9vnB1T/cloud-native.png"
+    "imageUrl": "https://i.ibb.co/QF9vnB1T/cloud-native.png",
+    "price": 249
   },
   {
     "id": "course-009",
@@ -123,7 +132,8 @@
     "duration": "60 hours",
     "description": "Apply the five stages of design thinking — empathize, define, ideate, prototype, and test — to solve complex real-world problems creatively.",
     "level": "Beginner",
-    "imageUrl": "https://i.ibb.co/kgKyXYXS/design-thinking.png"
+    "imageUrl": "https://i.ibb.co/kgKyXYXS/design-thinking.png",
+    "price": 129
   },
   {
     "id": "course-010",
@@ -137,6 +147,10 @@
     "duration": "75 hours",
     "description": "Transform raw data into compelling narratives using tools like D3.js, Tableau, and Python. Learn to communicate insights that influence decisions.",
     "level": "Beginner",
-    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png"
+    "imageUrl": "https://i.ibb.co/rNM8hZd/machine-learning.png",
+    "price": 149
   }
 ]
+
+
+}

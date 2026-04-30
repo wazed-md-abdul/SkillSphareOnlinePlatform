@@ -14,10 +14,10 @@ const CourseCard = ({ course,id }) => {
           src={course.imageUrl} 
         />
       </div>
-      <div className="flex items-center text-on-primary-container bg-primary-container gap-2 mb-4">
+      <div className="text-[10px] font-bold tracking-widest uppercase text-on-primary-container bg-primary-container px-3 py-1 rounded-full my-0 mb-2 inline-block">
         {course.category}
       </div>
-      <h3 className="text-2xl font-bold font-headline mb-2 leading-tight group-hover:text-primary transition-colors">
+      <h3 className="text-2xl font-bold flex  font-headline mb-2 leading-tight group-hover:text-primary transition-colors">
         {course.title}
       </h3>
       <p className="text-sm text-on-surface-variant font-body mb-6">
