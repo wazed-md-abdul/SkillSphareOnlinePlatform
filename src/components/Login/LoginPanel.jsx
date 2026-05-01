@@ -2,8 +2,51 @@
 
 import Link from 'next/link';
 import React from 'react';
+import {toast,Toast} from "@heroui/react";
+import { authClient } from '@/lib/auth-client';
 
 const LoginPanel = () => {
+  const googleAuth =  async () => {
+      await authClient.signIn.social({
+      provider: "google",
+    })
+  }
+
+  const onsubmit = async (e) => {
+    e.preventDefault();
+    const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
+   
+    const {data,error} = await authClient.signIn.email(
+      {
+        ...formDataObj,
+      callbackURL: "/",
+      rememberMe: true,
+      }
+    );
+    if(error){
+        toast.warning(`${error.message}`, {
+          actionProps: {
+            children: "Error",
+            className: "bg-warning text-warning-foreground",
+            
+          },
+          description: "Invalid Credentials",
+        })
+    }
+    if(data){
+        toast.success("You have Successfully signed up", {
+          actionProps: {
+            children: "Success",
+            className: "bg-success text-success-foreground",
+          },
+          description: "Successfully Logged In",
+        })
+    }
+
+
+  }
+
+
   return (
     <div className="w-full max-w-[480px] mx-auto flex-shrink-0">
       <div className="glass-panel ambient-shadow ghost-border rounded-[2rem] sm:rounded-xl p-5 min-[380px]:p-6 sm:p-8 md:p-10 lg:p-12">
@@ -16,7 +59,7 @@ const LoginPanel = () => {
           <h2 className="font-headline text-2xl min-[380px]:text-3xl font-bold tracking-tight mb-2">Welcome Back</h2>
         </div>
 
-        <form className="space-y-5 sm:space-y-6" onSubmit={(e) => e.preventDefault()}>
+        <form className="space-y-5 sm:space-y-6" onSubmit={onsubmit}>
           {/* Email Field */}
           <div className="space-y-2">
             <label className="font-label text-[11px] font-bold uppercase tracking-widest text-on-surface-variant ml-1">
@@ -27,6 +70,7 @@ const LoginPanel = () => {
                 mail
               </span>
               <input
+                name='email'
                 className="w-full min-w-0 bg-surface-container-highest border-none rounded-lg py-3.5 sm:py-4 pl-12 pr-4 font-body text-sm sm:text-base focus:ring-1 focus:ring-primary focus:bg-primary-container transition-all outline-none"
                 placeholder="name@example.com"
                 type="email"
@@ -52,6 +96,7 @@ const LoginPanel = () => {
                 lock
               </span>
               <input
+                name='password'
                 className="w-full min-w-0 bg-surface-container-highest border-none rounded-lg py-3.5 sm:py-4 pl-12 pr-4 font-body text-sm sm:text-base focus:ring-1 focus:ring-primary focus:bg-primary-container transition-all outline-none"
                 placeholder="••••••••"
                 type="password"
@@ -62,6 +107,7 @@ const LoginPanel = () => {
           {/* Remember Me */}
           <div className="flex items-center gap-3 py-2">
             <input
+         
               className="w-5 h-5 rounded border-none bg-surface-container-highest text-primary focus:ring-primary-container cursor-pointer"
               id="remember"
               type="checkbox"
@@ -89,18 +135,14 @@ const LoginPanel = () => {
             <div className="h-px bg-outline-variant/30 flex-1"></div>
           </div>
 
-          <div className="grid grid-cols-1 min-[380px]:grid-cols-2 gap-3 sm:gap-4 w-full">
-            <button className="flex-1 py-3 px-4 rounded-full border border-outline-variant/50 flex items-center justify-center gap-2 font-label text-xs font-bold hover:bg-surface-container-low transition-colors cursor-pointer">
+          <div className="flex min-[380px] gap-3 sm:gap-4 w-full">
+            <button onClick={googleAuth} className="flex-1 py-3 px-4 rounded-full border border-outline-variant/50 flex items-center justify-center gap-2 font-label text-xs font-bold hover:bg-surface-container-low transition-colors cursor-pointer">
               <img
                 alt="Google"
                 className="w-4 h-4"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuApFVJaCFSVejeAyUl9Fc3-6Zd2n1xLYH1TWUEFJIs4ZOCGQHG7ly8R1QOxHmX6dJOE2UiIDj4lzkOip8rznoSV78xgJU84mBbhxSpdMQa4fac9jgbL3GWo4RmNjIX4jqZ1piOp2QzSfaQFgvTcG9Aa7BP9MG8UQq6wdJ9QKV3yznyxIqbbUTRqapBtun0xCW4dGA16-1RIvoU9CQnzYvlcrbqbLA-yKkOaaQnQy8qXZmHxeQQXM8SX9v1K07_jGwuw2HCDhSg1EUzC"
               />
               Google
-            </button>
-            <button className="flex-1 py-3 px-4 rounded-full border border-outline-variant/50 flex items-center justify-center gap-2 font-label text-xs font-bold hover:bg-surface-container-low transition-colors cursor-pointer">
-              <span className="material-symbols-outlined text-lg">ios</span>
-              Apple
             </button>
           </div>
 
@@ -119,6 +161,7 @@ const LoginPanel = () => {
         <a className="hover:text-primary transition-colors" href="#">Terms</a>
         <a className="hover:text-primary transition-colors" href="#">Accessibility</a>
       </div>
+        <Toast.Provider />
     </div>
   );
 };

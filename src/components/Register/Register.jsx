@@ -1,9 +1,37 @@
 "use client";
 
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import React from "react";
-
+import {toast,Toast} from "@heroui/react";
 const Register = () => {
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
+        const {data,error} = await authClient.signUp.email(formDataObj);
+        if(error){
+            toast.warning(`${error.message}`, {
+              actionProps: {
+                children: "Error",
+                className: "bg-warning text-warning-foreground",
+                
+              },
+              description: "Go to login page",
+            })
+        }
+        if(data){
+            toast.success("You have Successfully signed up", {
+              actionProps: {
+                children: "Success",
+                className: "bg-success text-success-foreground",
+              },
+              description: "No Go to login page",
+            })
+        }
+
+
+
+    }
     return (
         <div className="bg-surface font-body text-on-surface mt-10 overflow-x-hidden selection:bg-primary-container flex min-w-0 flex-col">
             {/* Brand Header */}
@@ -24,7 +52,7 @@ const Register = () => {
                             </p>
                         </div>
 
-                        <form className="w-full min-w-0 space-y-6" onSubmit={(e) => e.preventDefault()}>
+                        <form className="w-full min-w-0 space-y-6" onSubmit={onSubmit}>
                             {/* Full Name */}
                             <div className="group">
                                 <label className="block text-[10px] font-label font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-2 ml-1">
@@ -35,6 +63,7 @@ const Register = () => {
                                         className="w-full bg-surface-container-highest h-14 px-6 rounded-lg text-on-surface placeholder:text-on-surface-variant/40 border-none focus:ring-1 focus:ring-primary focus:bg-primary-container/10 transition-all duration-300 font-medium"
                                         placeholder="Design Enthusiast"
                                         type="text"
+                                        name="name"
                                     />
                                 </div>
                             </div>
@@ -46,6 +75,7 @@ const Register = () => {
                                 </label>
                                 <div className="relative">
                                     <input
+                                        name="email"
                                         className="w-full bg-surface-container-highest h-14 px-6 rounded-lg text-on-surface placeholder:text-on-surface-variant/40 border-none focus:ring-1 focus:ring-primary focus:bg-primary-container/10 transition-all duration-300 font-medium"
                                         placeholder="hello@skillsphare.com"
                                         type="email"
@@ -57,19 +87,21 @@ const Register = () => {
                             <div className="grid min-w-0 grid-cols-1 gap-6 md:grid-cols-2">
                                 <div className="group min-w-0">
                                     <label className="block text-[10px] font-label font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-2 ml-1">
-                                        Password
+                                        Put the Image Url
                                     </label>
                                     <input
+                                        name="image"
                                         className="w-full bg-surface-container-highest h-14 px-6 rounded-lg text-on-surface placeholder:text-on-surface-variant/40 border-none focus:ring-1 focus:ring-primary focus:bg-primary-container/10 transition-all duration-300 font-medium"
-                                        placeholder="••••••••"
-                                        type="password"
+                                        placeholder="https://example.com/avatar.jpg"
+                                        type="text"
                                     />
                                 </div>
                                 <div className="group min-w-0">
                                     <label className="block text-[10px] font-label font-bold uppercase tracking-[0.1em] text-on-surface-variant mb-2 ml-1">
-                                        Confirm
+                                        Password
                                     </label>
                                     <input
+                                        name="password"
                                         className="w-full bg-surface-container-highest h-14 px-6 rounded-lg text-on-surface placeholder:text-on-surface-variant/40 border-none focus:ring-1 focus:ring-primary focus:bg-primary-container/10 transition-all duration-300 font-medium"
                                         placeholder="••••••••"
                                         type="password"
@@ -119,7 +151,7 @@ const Register = () => {
 
                 </section>
             </main>
-
+           <Toast.Provider />
         </div>
     );
 };

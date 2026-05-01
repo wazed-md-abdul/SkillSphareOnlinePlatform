@@ -70,31 +70,138 @@ const CourseDetails = async ({ params }) => {
           </div>
 
           {/* Sidebar */}
-          <aside className="lg:col-span-5 rounded-xl p-4 shadow-lg sm:p-6 lg:p-8">
-            <div className="rounded-xl p-0 sm:p-4 lg:p-8">
+          <aside className="lg:col-span-5 rounded-xl shadow-lg sm:p-3 lg:p-6">
+            <div className="rounded-xl p-0 sm:p-1 lg:p-2">
               <h3 className="mb-6 text-sm font-extrabold uppercase tracking-widest text-outline">Course Specs</h3>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-3">
                   <div className="flex items-center gap-3 font-bold text-primary"><IoTimer /><div className="text-black">{course?.duration} </div></div>
                   <p className="font-bold text-on-surface">Course Duration</p>
                 </div>
-                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-3">
                   <div className="flex items-center gap-3 font-bold text-primary"> <SiLevelsdotfyi /><div className="text-black">{course?.level}</div></div>
                   <p className="font-bold text-on-surface">Course Level</p>
                 </div>
-                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-3">
                   <div className="flex items-center gap-3 font-bold text-primary"><RiGlobalLine /><div className="text-black">English</div></div>
                   <p className="font-bold text-on-surface">Language</p>
                 </div>
-                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-3">
                   <div className="flex items-center gap-3 font-bold text-primary"><GrCertificate /><div className="text-black">Certification</div></div>
                   <p className="font-bold text-on-surface">Globally Recognized</p>
                 </div>
-
-
               </div>
             </div>
+
+            <section className="mt-8 rounded-xl p-5 shadow-lg sm:p-6 lg:p-8">
+              <div className="space-y-8">
+              <div className="flex items-end justify-between border-b border-outline-variant/20 pb-4">
+                <h2 className="text-3xl font-headline font-bold text-on-surface">
+                  Course Curriculum
+                </h2>
+                <span className="text-secondary font-label text-sm font-bold uppercase tracking-widest">
+                  12 Modules • 48 Lessons
+                </span>
+              </div>
+
+              <div className="space-y-4">
+                <div className="group bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+                   <div className="group bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+        <button className="w-full flex items-center justify-between p-6 text-left">
+          <div className="flex items-center gap-4">
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container font-headline font-bold">
+              01
+            </span>
+
+            <div>
+              <h3 className="font-headline font-bold text-on-surface text-lg">
+                Introduction to Web Development
+              </h3>
+              <p className="text-sm text-secondary">4 Lessons • 1h 10m</p>
+            </div>
+          </div>
+
+          <span className="material-symbols-outlined text-outline transition-transform group-hover:rotate-180">
+            expand_more
+          </span>
+        </button>
+      </div>
+
+      {/* Module 2 */}
+      <div className="group bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+        <button className="w-full flex items-center justify-between p-6 text-left">
+          <div className="flex items-center gap-4">
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container font-headline font-bold">
+              02
+            </span>
+
+            <div>
+              <h3 className="font-headline font-bold text-on-surface text-lg">
+                React Fundamentals
+              </h3>
+              <p className="text-sm text-secondary">5 Lessons • 2h 05m</p>
+            </div>
+          </div>
+
+          <span className="material-symbols-outlined text-outline transition-transform group-hover:rotate-180">
+            expand_more
+          </span>
+        </button>
+      </div>
+
+      {/* Module 3 */}
+      <div className="group bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+        <button className="w-full flex items-center justify-between p-6 text-left">
+          <div className="flex items-center gap-4">
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container font-headline font-bold">
+              03
+            </span>
+
+            <div>
+              <h3 className="font-headline font-bold text-on-surface text-lg">
+                Backend with Node.js
+              </h3>
+              <p className="text-sm text-secondary">3 Lessons • 1h 30m</p>
+            </div>
+          </div>
+
+          <span className="material-symbols-outlined text-outline transition-transform group-hover:rotate-180">
+            expand_more
+          </span>
+        </button>
+      </div>
+
+      {/* Module 4 */}
+      <div className="group bg-surface-container-low rounded-lg transition-all hover:bg-surface-container">
+        <button className="w-full flex items-center justify-between p-6 text-left">
+          <div className="flex items-center gap-4">
+            <span className="w-10 h-10 flex items-center justify-center rounded-full bg-primary-container text-on-primary-container font-headline font-bold">
+              04
+            </span>
+
+            <div>
+              <h3 className="font-headline font-bold text-on-surface text-lg">
+                Deployment & Final Project
+              </h3>
+              <p className="text-sm text-secondary">4 Lessons • 2h 15m</p>
+            </div>
+          </div>
+
+          <span className="material-symbols-outlined text-outline transition-transform group-hover:rotate-180">
+            expand_more
+          </span>
+        </button>
+      </div>
+                </div>
+              </div>
+            </div>
+
+
+            </section>
           </aside>
+        
+            
+ 
         </div>
       </main>
 
