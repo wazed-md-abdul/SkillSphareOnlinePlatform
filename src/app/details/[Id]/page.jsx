@@ -70,25 +70,25 @@ const CourseDetails = async ({ params }) => {
           </div>
 
           {/* Sidebar */}
-          <aside className="lg:col-span-5 shadow-lg rounded-xl p-8  ">
-            <div className=" rounded-xl p-8 ">
-              <h3 className="text-sm uppercase tracking-widest font-extrabold text-outline mb-6">Course Specs</h3>
-              <div>
-                <div className="flex shadow-lg p-10 rounded-2xl my-10 items-center gap-3 justify-between">
-                  <div className=" font-bold flex items-center justify-center text-primary gap-3 "><IoTimer /><div className="text-black">{course?.duration} </div></div>
-                  <p className=" text-primary font-bold text-on-surface">Course Duration</p>
+          <aside className="lg:col-span-5 rounded-xl p-4 shadow-lg sm:p-6 lg:p-8">
+            <div className="rounded-xl p-0 sm:p-4 lg:p-8">
+              <h3 className="mb-6 text-sm font-extrabold uppercase tracking-widest text-outline">Course Specs</h3>
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                  <div className="flex items-center gap-3 font-bold text-primary"><IoTimer /><div className="text-black">{course?.duration} </div></div>
+                  <p className="font-bold text-on-surface">Course Duration</p>
                 </div>
-                <div className="flex shadow-lg p-10 rounded-2xl my-10 items-center gap-3 justify-between">
-                  <div className=" font-bold flex items-center justify-center text-primary gap-3 "> <SiLevelsdotfyi /><div className="text-black">{course?.level}</div></div>
-                  <p className=" text-primary font-bold text-on-surface">Course Level</p>
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                  <div className="flex items-center gap-3 font-bold text-primary"> <SiLevelsdotfyi /><div className="text-black">{course?.level}</div></div>
+                  <p className="font-bold text-on-surface">Course Level</p>
                 </div>
-                <div className="flex shadow-lg p-10 rounded-2xl my-10 items-center gap-3 justify-between">
-                  <div className=" font-bold flex items-center justify-center text-primary gap-3 "><RiGlobalLine /><div className="text-black">English</div></div>
-                  <p className=" text-primary font-bold text-on-surface">Language</p>
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                  <div className="flex items-center gap-3 font-bold text-primary"><RiGlobalLine /><div className="text-black">English</div></div>
+                  <p className="font-bold text-on-surface">Language</p>
                 </div>
-                <div className="flex shadow-lg p-10 rounded-2xl my-10 items-center gap-3 justify-between">
-                  <div className=" font-bold flex items-center justify-center text-primary gap-3 "><GrCertificate /><div className="text-black">Certification</div></div>
-                  <p className=" text-primary font-bold text-on-surface">Globally Recognized</p>
+                <div className="flex flex-col gap-3 rounded-2xl p-5 shadow-lg sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-8">
+                  <div className="flex items-center gap-3 font-bold text-primary"><GrCertificate /><div className="text-black">Certification</div></div>
+                  <p className="font-bold text-on-surface">Globally Recognized</p>
                 </div>
 
 

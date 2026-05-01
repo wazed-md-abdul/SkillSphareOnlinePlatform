@@ -21,9 +21,7 @@ import Link from "next/link";
         <h3 className="text-2xl font-display font-bold text-on-surface leading-snug">{courses.title}</h3>
       </div>
       <div className="flex items-center gap-3 py-2">
-        <div className={`w-8 h-8 rounded-full ${courses.authorBg} flex items-center justify-center text-on-secondary-container font-bold text-xs`}>
-          {courses.authorInitial}
-        </div>
+         <img className={`w-8 h-8 rounded-full flex items-center justify-center overflow-hidden`} src={courses.authorAvatar} alt={courses.author}/>
         <p className="text-on-surface-variant text-sm font-medium">{courses.author}</p>
       </div>
       <div className="flex items-center justify-between pt-4">
