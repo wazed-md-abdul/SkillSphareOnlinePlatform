@@ -20,7 +20,7 @@ export default async function AllCourses() {
           </p>
         </header>
 
-        <section className="mb-12 flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <section className="mb-12 flex flex-col md:flex-row md:items-center justify-end gap-6">
           <div className="relative flex-grow max-w-xl">
             <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
               search
@@ -32,15 +32,7 @@ export default async function AllCourses() {
               type="text"
             />
           </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <button className="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm">All</button>
-            <button className="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container hover:bg-primary-container transition-colors font-bold text-sm">Development</button>
-            <button className="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container hover:bg-primary-container transition-colors font-bold text-sm">Design</button>
-            <button className="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container hover:bg-primary-container transition-colors font-bold text-sm">Business</button>
-            <div className="w-px h-6 bg-outline-variant mx-2 opacity-30"></div>
-            <div className="relative group">
-            </div>
-          </div>
+
         </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
