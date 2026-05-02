@@ -1,150 +1,154 @@
 <div align="center">
 
-<!-- Animated Hero Banner -->
-<svg width="900" height="260" viewBox="0 0 900 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SkillSphare animated banner">
+<!-- Typing animation via external service (GitHub safe) -->
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=13&duration=3000&pause=1000&color=2DD4BF&center=true&vCenter=true&multiline=true&width=600&height=30&lines=Discover+%E2%80%A2+Learn+%E2%80%A2+Practice+%E2%80%A2+Improve" alt="Typing SVG"/>
+
+<br/>
+
+<!-- Animated SVG Banner — SMIL only, GitHub-compatible -->
+<svg width="860" height="200" viewBox="0 0 860 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background mesh gradient -->
-    <radialGradient id="mesh1" cx="20%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
-    </radialGradient>
-    <radialGradient id="mesh2" cx="80%" cy="70%" r="55%">
-      <stop offset="0%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="tealPurple" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#161B22"/>
+    </linearGradient>
+    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2DD4BF"/>
       <stop offset="50%" stop-color="#818CF8"/>
       <stop offset="100%" stop-color="#C084FC"/>
     </linearGradient>
-    <linearGradient id="tealPurpleV" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="teal" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#2DD4BF"/>
-      <stop offset="100%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#0D9488"/>
     </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="softBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <style>
-      .hero-title { font-family: ui-monospace, 'Cascadia Code', monospace; font-weight: 900; }
-      .hero-sub { font-family: ui-sans-serif, system-ui, sans-serif; }
-      .pulse-ring { animation: pulseRing 2.4s ease-in-out infinite; transform-origin: center; }
-      @keyframes pulseRing { 0%,100%{opacity:.15;transform:scale(1)} 50%{opacity:.4;transform:scale(1.12)} }
-      .float-node { animation: floatNode 3s ease-in-out infinite; }
-      @keyframes floatNode { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
-      .float-node-2 { animation: floatNode 3.4s ease-in-out infinite .4s; }
-      .float-node-3 { animation: floatNode 2.8s ease-in-out infinite .8s; }
-      .float-node-4 { animation: floatNode 3.2s ease-in-out infinite .2s; }
-      .spin-slow { animation: spinSlow 8s linear infinite; transform-origin: 450px 130px; }
-      @keyframes spinSlow { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-      .dash-flow { stroke-dasharray: 6 8; animation: dashFlow 2s linear infinite; }
-      @keyframes dashFlow { to { stroke-dashoffset: -100; } }
-      .blink-cursor { animation: blinkCursor 1s step-end infinite; }
-      @keyframes blinkCursor { 0%,100%{opacity:1} 50%{opacity:0} }
-      .shimmer { animation: shimmer 3s ease-in-out infinite; }
-      @keyframes shimmer { 0%,100%{opacity:.6} 50%{opacity:1} }
-      .badge-pop { animation: badgePop 4s ease-in-out infinite; }
-      @keyframes badgePop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
-    </style>
+    <linearGradient id="indigo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A5B4FC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E879F9"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6EE7B7"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
   </defs>
 
-  <!-- Dark background -->
-  <rect width="900" height="260" rx="20" fill="#0F172A"/>
-  <rect width="900" height="260" rx="20" fill="url(#mesh1)"/>
-  <rect width="900" height="260" rx="20" fill="url(#mesh2)"/>
+  <!-- Background -->
+  <rect width="860" height="200" rx="16" fill="url(#bg)"/>
 
-  <!-- Grid lines (subtle) -->
-  <g opacity="0.04" stroke="#94A3B8" stroke-width="1">
-    <line x1="0" y1="65" x2="900" y2="65"/>
-    <line x1="0" y1="130" x2="900" y2="130"/>
-    <line x1="0" y1="195" x2="900" y2="195"/>
-    <line x1="225" y1="0" x2="225" y2="260"/>
-    <line x1="450" y1="0" x2="450" y2="260"/>
-    <line x1="675" y1="0" x2="675" y2="260"/>
-  </g>
+  <!-- Subtle grid -->
+  <line x1="0" y1="50" x2="860" y2="50" stroke="#21262D" stroke-width="1"/>
+  <line x1="0" y1="100" x2="860" y2="100" stroke="#21262D" stroke-width="1"/>
+  <line x1="0" y1="150" x2="860" y2="150" stroke="#21262D" stroke-width="1"/>
+  <line x1="215" y1="0" x2="215" y2="200" stroke="#21262D" stroke-width="1"/>
+  <line x1="430" y1="0" x2="430" y2="200" stroke="#21262D" stroke-width="1"/>
+  <line x1="645" y1="0" x2="645" y2="200" stroke="#21262D" stroke-width="1"/>
 
-  <!-- Orbiting ring decoration -->
-  <g class="spin-slow" opacity="0.08">
-    <ellipse cx="450" cy="130" rx="220" ry="80" fill="none" stroke="url(#tealPurple)" stroke-width="1.5" stroke-dasharray="4 8"/>
-  </g>
-
-  <!-- Floating corner orbs -->
-  <circle cx="80" cy="80" r="55" fill="#2DD4BF" opacity="0.04" class="pulse-ring"/>
-  <circle cx="820" cy="180" r="65" fill="#C084FC" opacity="0.04" class="pulse-ring" style="animation-delay:.8s"/>
-  <circle cx="820" cy="180" r="38" fill="#C084FC" opacity="0.06"/>
-  <circle cx="80" cy="80" r="32" fill="#2DD4BF" opacity="0.08"/>
-
-  <!-- Left node cluster -->
-  <g class="float-node" filter="url(#softBlur)">
-    <circle cx="110" cy="130" r="30" fill="#2DD4BF" opacity="0.12"/>
-    <circle cx="110" cy="130" r="16" fill="#2DD4BF" opacity="0.9"/>
-    <text x="110" y="135" text-anchor="middle" font-size="11" fill="#0F172A" font-weight="800" font-family="monospace">⚡</text>
-  </g>
-
-  <!-- Right node cluster -->
-  <g class="float-node-4" filter="url(#softBlur)">
-    <circle cx="790" cy="130" r="30" fill="#C084FC" opacity="0.12"/>
-    <circle cx="790" cy="130" r="16" fill="#C084FC" opacity="0.9"/>
-    <text x="790" y="135" text-anchor="middle" font-size="11" fill="#0F172A" font-weight="800" font-family="monospace">🏆</text>
-  </g>
-
-  <!-- Top-mid node -->
-  <g class="float-node-2" filter="url(#softBlur)">
-    <circle cx="310" cy="62" r="22" fill="#818CF8" opacity="0.15"/>
-    <circle cx="310" cy="62" r="12" fill="#818CF8" opacity="0.9"/>
-  </g>
-
-  <!-- Bottom-mid node -->
-  <g class="float-node-3" filter="url(#softBlur)">
-    <circle cx="590" cy="198" r="22" fill="#34D399" opacity="0.15"/>
-    <circle cx="590" cy="198" r="12" fill="#34D399" opacity="0.9"/>
-  </g>
-
-  <!-- Connecting dashed lines -->
-  <path d="M126 130 Q220 90 298 68" fill="none" stroke="url(#tealPurple)" stroke-width="1.5" class="dash-flow" opacity="0.5"/>
-  <path d="M322 68 Q390 55 450 130" fill="none" stroke="url(#tealPurple)" stroke-width="1.5" class="dash-flow" opacity="0.5" style="animation-delay:.4s"/>
-  <path d="M450 130 Q520 205 578 196" fill="none" stroke="url(#tealPurple)" stroke-width="1.5" class="dash-flow" opacity="0.5" style="animation-delay:.8s"/>
-  <path d="M602 196 Q696 200 774 138" fill="none" stroke="url(#tealPurple)" stroke-width="1.5" class="dash-flow" opacity="0.5" style="animation-delay:1.2s"/>
-
-  <!-- Main title -->
-  <text x="450" y="108" text-anchor="middle" class="hero-title shimmer" font-size="44" fill="url(#tealPurple)" filter="url(#glow)" letter-spacing="1">SkillSphare</text>
-
-  <!-- Subtitle with cursor -->
-  <text x="450" y="148" text-anchor="middle" class="hero-sub" font-size="15" fill="#94A3B8" letter-spacing="2">ONLINE LEARNING PLATFORM</text>
-
-  <!-- Bottom tagline -->
-  <text x="450" y="198" text-anchor="middle" font-family="ui-monospace, monospace" font-size="12" fill="#475569">
-    <tspan fill="#2DD4BF">&gt; </tspan>
-    <tspan fill="#CBD5E1">Discover. Learn. Practice. Improve</tspan>
-    <tspan class="blink-cursor" fill="#2DD4BF">_</tspan>
+  <!-- NODE 1: Discover -->
+  <circle cx="108" cy="100" r="38" fill="#2DD4BF" fill-opacity="0.08">
+    <animate attributeName="r" values="38;44;38" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="108" cy="100" r="22" fill="url(#teal)">
+    <animate attributeName="cy" values="100;93;100" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="108" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
+    <animate attributeName="y" values="104;97;104" dur="3s" repeatCount="indefinite"/>
+    🔍
   </text>
+  <text x="108" y="140" text-anchor="middle" font-size="10" fill="#2DD4BF" font-family="sans-serif" font-weight="700" letter-spacing="1.5">DISCOVER</text>
 
-  <!-- Bottom accent line -->
-  <rect x="160" y="222" width="580" height="2" rx="1" fill="url(#tealPurple)" opacity="0.5" class="shimmer"/>
+  <!-- NODE 2: Learn -->
+  <circle cx="322" cy="70" r="34" fill="#818CF8" fill-opacity="0.08">
+    <animate attributeName="r" values="34;40;34" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
+    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+  <circle cx="322" cy="70" r="20" fill="url(#indigo)">
+    <animate attributeName="cy" values="70;63;70" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+  <text x="322" y="74" text-anchor="middle" font-size="14" font-family="sans-serif">
+    <animate attributeName="y" values="74;67;74" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
+    📚
+  </text>
+  <text x="322" y="108" text-anchor="middle" font-size="10" fill="#818CF8" font-family="sans-serif" font-weight="700" letter-spacing="1.5">LEARN</text>
+
+  <!-- NODE 3: Practice -->
+  <circle cx="538" cy="130" r="34" fill="#C084FC" fill-opacity="0.08">
+    <animate attributeName="r" values="34;40;34" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
+    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+  <circle cx="538" cy="130" r="20" fill="url(#purple)">
+    <animate attributeName="cy" values="130;122;130" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+  <text x="538" y="134" text-anchor="middle" font-size="14" font-family="sans-serif">
+    <animate attributeName="y" values="134;126;134" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
+    ⚡
+  </text>
+  <text x="538" y="168" text-anchor="middle" font-size="10" fill="#C084FC" font-family="sans-serif" font-weight="700" letter-spacing="1.5">PRACTICE</text>
+
+  <!-- NODE 4: Improve -->
+  <circle cx="752" cy="100" r="38" fill="#34D399" fill-opacity="0.08">
+    <animate attributeName="r" values="38;44;38" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
+    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
+  </circle>
+  <circle cx="752" cy="100" r="22" fill="url(#green)">
+    <animate attributeName="cy" values="100;93;100" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
+  </circle>
+  <text x="752" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
+    <animate attributeName="y" values="104;97;104" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
+    🏆
+  </text>
+  <text x="752" y="140" text-anchor="middle" font-size="10" fill="#34D399" font-family="sans-serif" font-weight="700" letter-spacing="1.5">IMPROVE</text>
+
+  <!-- Path lines (static dashed) -->
+  <path d="M 130 96 Q 210 60 302 68" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
+  <path d="M 342 76 Q 430 110 518 128" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
+  <path d="M 558 126 Q 645 110 730 100" fill="none" stroke="#C084FC" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
+
+  <!-- Travelling dot: Discover → Learn -->
+  <circle r="5" fill="#2DD4BF">
+    <animateMotion dur="2.2s" repeatCount="indefinite" begin="0s" path="M 130 96 Q 210 60 302 68"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Travelling dot: Learn → Practice -->
+  <circle r="5" fill="#818CF8">
+    <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s" path="M 342 76 Q 430 110 518 128"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+
+  <!-- Travelling dot: Practice → Improve -->
+  <circle r="5" fill="#C084FC">
+    <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.6s" path="M 558 126 Q 645 110 730 100"/>
+    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite" begin="1.6s"/>
+  </circle>
+
+  <!-- Bottom accent bar -->
+  <rect x="50" y="186" width="760" height="3" rx="2" fill="url(#grad1)">
+    <animate attributeName="fill-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
 </svg>
 
 <br/>
 
 <p>
-  <a href="#"><img src="https://img.shields.io/badge/Next.js-15+-000000?style=for-the-badge&logo=next.js&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/HeroUI-000000?style=for-the-badge&logo=react&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Better_Auth-FF6B35?style=for-the-badge&logo=auth0&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white"/></a>
+  <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion"/>
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
+  <img src="https://img.shields.io/badge/HeroUI-000000?style=for-the-badge&logo=react&logoColor=white" alt="HeroUI"/>
+  <img src="https://img.shields.io/badge/Better_Auth-FF6B35?style=for-the-badge&logo=auth0&logoColor=white" alt="Better Auth"/>
+  <img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" alt="ESLint"/>
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/status-active-2DD4BF?style=flat-square"/>
-  <img src="https://img.shields.io/badge/license-MIT-818CF8?style=flat-square"/>
-  <img src="https://img.shields.io/badge/PRs-welcome-C084FC?style=flat-square"/>
-  <img src="https://img.shields.io/badge/made_with-❤️-FF6B6B?style=flat-square"/>
+  <img src="https://img.shields.io/badge/status-active-2DD4BF?style=flat-square" alt="active"/>
+  <img src="https://img.shields.io/badge/license-MIT-818CF8?style=flat-square" alt="MIT"/>
+  <img src="https://img.shields.io/badge/PRs-welcome-C084FC?style=flat-square" alt="PRs welcome"/>
+  <img src="https://img.shields.io/badge/made_with-❤️-FF6B6B?style=flat-square" alt="love"/>
 </p>
 
 </div>
@@ -153,22 +157,21 @@
 
 ## 📖 About
 
-**SkillSphare** is a modern, full-stack online learning platform where learners can explore curated learning paths, browse detailed course catalogs, discover skilled instructors, and track their progress — all wrapped in a buttery-smooth, animated interface.
+**SkillSphare** is a modern, full-stack online learning platform where learners can explore curated learning paths, browse detailed course catalogs, discover skilled instructors, and track their progress — all wrapped in a smooth, animated interface.
 
-Built with the latest Next.js App Router, styled with Tailwind CSS v4, and animated with Framer Motion, SkillSphare is designed to feel as good as it looks.
+Built with the latest Next.js App Router, styled with Tailwind CSS v4, and animated with Framer Motion, SkillSphare is designed to feel as great as it looks.
 
 ---
 
 ## ✨ Features
 
-<!-- Feature grid using HTML table for GitHub README -->
 <div align="center">
 
 | 🎯 Core | 🎨 Design | 🔐 Auth & Data |
-|---|---|---|
-| Course catalog & browsing | Animated UI with Framer Motion | MongoDB-backed authentication |
-| Curated learning pathways | Responsive layout (mobile-first) | Session management via Better Auth |
-| Instructor profile cards | Dark/light theme support | Secure API routes with Next.js |
+|:---:|:---:|:---:|
+| Course catalog & browsing | Framer Motion animations | MongoDB-backed authentication |
+| Curated learning pathways | Fully responsive (mobile-first) | Session management via Better Auth |
+| Instructor profile cards | Dark / Light theme support | Secure Next.js API routes |
 | Progress tracking dashboard | Smooth page transitions | Mongo adapter for user data |
 | Step-by-step course flow | HeroUI component library | Environment-based config |
 
@@ -182,25 +185,25 @@ Built with the latest Next.js App Router, styled with Tailwind CSS v4, and anima
 SkillSphareOnlinePlatform/
 ├── src/
 │   ├── app/                    # Next.js App Router
-│   │   ├── (auth)/             # Auth routes (login, register)
-│   │   ├── (dashboard)/        # Protected dashboard routes
+│   │   ├── (auth)/             # Login & Register routes
+│   │   ├── (dashboard)/        # Protected user dashboard
 │   │   ├── courses/            # Course catalog & detail pages
 │   │   ├── pathways/           # Learning pathway pages
 │   │   ├── instructors/        # Instructor showcase
 │   │   ├── globals.css         # Global styles (Tailwind v4)
 │   │   └── layout.tsx          # Root layout
-│   ├── components/             # Reusable UI components
-│   │   ├── ui/                 # Base components (cards, buttons…)
+│   ├── components/
+│   │   ├── ui/                 # Base UI components
 │   │   ├── courses/            # Course-specific components
 │   │   └── layout/             # Header, footer, sidebar
-│   ├── lib/                    # Utilities & helpers
+│   ├── lib/
 │   │   ├── auth.ts             # Better Auth configuration
 │   │   └── db.ts               # MongoDB connection
 │   └── types/                  # TypeScript type definitions
 ├── public/                     # Static assets
-├── .env.local                  # Environment variables (not committed)
-├── next.config.ts              # Next.js configuration
-├── tailwind.config.ts          # Tailwind CSS configuration
+├── .env.local                  # Environment variables (gitignored)
+├── next.config.ts
+├── tailwind.config.ts
 └── package.json
 ```
 
@@ -212,7 +215,7 @@ SkillSphareOnlinePlatform/
 flowchart TD
   A([🌐 User Visits Platform]) --> B{Auth Status?}
 
-  B -->|Not logged in| C[📋 Login / Register Page]
+  B -->|Not logged in| C[📋 Login / Register]
   B -->|Logged in| D[🏠 Dashboard]
 
   C --> E[🔐 Authenticate via Better Auth + MongoDB]
@@ -227,7 +230,7 @@ flowchart TD
   J --> K{More to explore?}
 
   K -->|Yes| F
-  K -->|Completed| L[🏆 Achievement & Next Path]
+  K -->|Completed| L[🏆 Achievement Unlocked!]
 
   style A fill:#2DD4BF,color:#0F172A,stroke:none
   style D fill:#818CF8,color:#fff,stroke:none
@@ -246,10 +249,10 @@ flowchart TD
 | **Styling** | Tailwind CSS v4 | Utility-first responsive styling |
 | **Components** | HeroUI + HeroUI Styles | Pre-built, themed UI components |
 | **Animation** | Framer Motion | Page transitions & micro-interactions |
-| **Database** | MongoDB | Course data, users, progress |
-| **Auth** | Better Auth + Mongo Adapter | Session management, OAuth |
+| **Database** | MongoDB | Courses, users, progress |
+| **Auth** | Better Auth + Mongo Adapter | Sessions & OAuth |
 | **Icons** | React Icons | Scalable icon set |
-| **Linting** | ESLint + eslint-config-next | Code quality & consistency |
+| **Linting** | ESLint + eslint-config-next | Code quality |
 
 ---
 
@@ -259,9 +262,9 @@ flowchart TD
 
 - **Node.js** `>= 18.x`
 - **npm** `>= 9.x` (or `pnpm` / `yarn`)
-- **MongoDB** instance (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- **MongoDB** instance — local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-### 1. Clone the repository
+### 1. Clone the repo
 
 ```bash
 git clone https://github.com/your-username/SkillSphareOnlinePlatform.git
@@ -274,16 +277,16 @@ cd SkillSphareOnlinePlatform
 npm install
 ```
 
-### 3. Configure environment variables
+### 3. Set up environment variables
 
-Create a `.env.local` file in the root directory:
+Create `.env.local` in the project root:
 
 ```env
 # MongoDB
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/skillsphare
 
 # Better Auth
-BETTER_AUTH_SECRET=your-secret-key-here
+BETTER_AUTH_SECRET=your-super-secret-key
 BETTER_AUTH_URL=http://localhost:3000
 
 # Optional: OAuth Providers
@@ -299,7 +302,7 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser. 🎉
+Open [http://localhost:3000](http://localhost:3000) — you're good to go! 🎉
 
 ---
 
@@ -312,94 +315,96 @@ npm run build
 # Start production server
 npm run start
 
-# Lint check
+# Lint
 npm run lint
 ```
 
-### Deploy to Vercel (Recommended)
+### ▲ Deploy to Vercel (Recommended)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
-1. Push your repository to GitHub
-2. Import the project on [Vercel](https://vercel.com)
+1. Push your repo to GitHub
+2. Import it on [vercel.com](https://vercel.com)
 3. Add your environment variables in the Vercel dashboard
-4. Deploy — Vercel auto-detects Next.js and handles the rest
+4. Hit **Deploy** — Vercel auto-detects Next.js ✅
 
 ---
 
 ## 🎨 Design System
 
-SkillSphare uses a cohesive design system built on top of Tailwind CSS and HeroUI:
-
-- **Primary color**: Teal (`#2DD4BF`) — action, links, progress
-- **Accent color**: Indigo (`#818CF8`) — highlights, badges
-- **Success color**: Emerald (`#34D399`) — completion states
-- **Backgrounds**: Dark slate (`#0F172A` / `#1E293B`) with light mode support
-- **Typography**: System sans-serif stack with `ui-monospace` for code elements
-- **Motion**: Spring-based animations via Framer Motion for all transitions
-
----
-
-## 🤝 Contributing
-
-Contributions are very welcome!
-
-1. **Fork** the repository
-2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-3. **Commit** your changes: `git commit -m 'feat: add amazing feature'`
-4. **Push** to your branch: `git push origin feature/amazing-feature`
-5. **Open** a Pull Request
-
-Please ensure your code passes ESLint checks (`npm run lint`) before submitting.
+| Token | Value | Usage |
+|---|---|---|
+| Primary | `#2DD4BF` Teal | Actions, links, progress |
+| Accent | `#818CF8` Indigo | Highlights, active states |
+| Secondary | `#C084FC` Purple | Badges, tags |
+| Success | `#34D399` Emerald | Completion, achievements |
+| Background | `#0F172A` / `#1E293B` | Dark surfaces |
+| Motion | Spring (Framer Motion) | All transitions & reveals |
 
 ---
 
 ## 🗺️ Roadmap
 
-- [ ] 🎥 Video player integration for course lessons
-- [ ] 💬 Discussion forums per course
-- [ ] 📊 Advanced analytics dashboard for instructors
-- [ ] 🏅 Certificates & badges on course completion
-- [ ] 🌐 Internationalization (i18n) support
-- [ ] 📱 Native mobile app (React Native)
+- [ ] 🎥 In-browser video player for lessons
+- [ ] 💬 Per-course discussion forum
+- [ ] 📊 Instructor analytics dashboard
+- [ ] 🏅 Certificates & badges on completion
+- [ ] 🌐 i18n / multi-language support
+- [ ] 📱 React Native mobile app
 - [ ] 🤖 AI-powered course recommendations
-- [ ] 💳 Stripe payment integration for premium content
+- [ ] 💳 Stripe integration for premium content
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+1. **Fork** this repository
+2. **Create** your branch: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'feat: add amazing feature'`
+4. **Push** your branch: `git push origin feature/amazing-feature`
+5. **Open** a Pull Request
+
+Please make sure `npm run lint` passes before submitting.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
 
 ---
 
 <div align="center">
 
-<!-- Animated footer SVG -->
-<svg width="700" height="70" viewBox="0 0 700 70" xmlns="http://www.w3.org/2000/svg">
+<!-- Footer SVG (SMIL only) -->
+<svg width="600" height="50" viewBox="0 0 600 50" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="footerGrad" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="fGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0"/>
       <stop offset="30%" stop-color="#2DD4BF"/>
       <stop offset="70%" stop-color="#818CF8"/>
       <stop offset="100%" stop-color="#C084FC" stop-opacity="0"/>
     </linearGradient>
-    <style>
-      .footer-pulse { animation: footerPulse 3s ease-in-out infinite; }
-      @keyframes footerPulse { 0%,100%{opacity:.4} 50%{opacity:1} }
-      .footer-dot { animation: footerDot 2s ease-in-out infinite; }
-      @keyframes footerDot { 0%,100%{transform:scale(1)} 50%{transform:scale(1.5)} }
-    </style>
   </defs>
-  <rect x="0" y="28" width="700" height="1.5" rx="1" fill="url(#footerGrad)" class="footer-pulse"/>
-  <circle cx="350" cy="28.75" r="5" fill="#818CF8" class="footer-dot"/>
-  <circle cx="310" cy="28.75" r="3" fill="#2DD4BF" class="footer-dot" style="animation-delay:.3s"/>
-  <circle cx="390" cy="28.75" r="3" fill="#C084FC" class="footer-dot" style="animation-delay:.6s"/>
-  <text x="350" y="58" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#64748B">Built with ❤️ using Next.js · React · Tailwind CSS · MongoDB</text>
+  <rect x="0" y="18" width="600" height="2" rx="1" fill="url(#fGrad)">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="3s" repeatCount="indefinite"/>
+  </rect>
+  <circle cx="300" cy="19" r="5" fill="#818CF8">
+    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="260" cy="19" r="3" fill="#2DD4BF">
+    <animate attributeName="r" values="3;4.5;3" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+  </circle>
+  <circle cx="340" cy="19" r="3" fill="#C084FC">
+    <animate attributeName="r" values="3;4.5;3" dur="1.9s" repeatCount="indefinite" begin="0.6s"/>
+  </circle>
+  <text x="300" y="42" text-anchor="middle" font-family="monospace" font-size="11" fill="#6B7280">Built with ❤️ · Next.js · React · Tailwind · MongoDB</text>
 </svg>
 
 <br/>
 
-⭐ **Star this repo** if you find it helpful!
+**⭐ Star this repo if you find it helpful!**
 
 </div>
