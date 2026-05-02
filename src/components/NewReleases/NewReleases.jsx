@@ -45,7 +45,7 @@ const allcourses = await getAllCourses();
         <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h2 className="text-4xl md:text-5xl font-display font-black text-on-surface leading-tight">Beyond the standard <br /> learning curve.</h2>
-            <p className="text-on-surface-variant text-lg leading-relaxed font-body max-w-md">Our curriculum is designed for the modern atelier. We don't just teach skills; we cultivate a signature perspective through hands-on mentorship and high-fidelity project work.</p>
+            <p className="text-on-surface-variant text-lg leading-relaxed font-body max-w-md">Our curriculum is designed for the modern life. We don't just teach skills; we cultivate a signature perspective through hands-on mentorship and high-fidelity project work.</p>
             <div className="flex flex-wrap gap-4">
               {["Curated Mentors", "Project Based", "Lifetime Access"].map((tag) => (
                 <div key={tag} className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">

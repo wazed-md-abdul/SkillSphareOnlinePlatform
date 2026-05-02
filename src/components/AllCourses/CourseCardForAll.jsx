@@ -6,6 +6,7 @@ const CourseCard = ({ course }) => {
  
   return (
     <>
+    
       <div className="group relative bg-surface-container-lowest rounded-xl p-6 transition-all duration-500 hover:shadow-[0px_20px_40px_rgba(25,28,29,0.06)]">
       <div className="aspect-video mb-6 overflow-hidden rounded-lg">
         <img 

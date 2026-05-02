@@ -9,12 +9,12 @@ const UserCard = () => {
 
   const onsubmit = async (e) => {
     e.preventDefault();
-    const userData =Object.fromEntries(new FormData(e.target));
+    const userData = Object.fromEntries(new FormData(e.target));
     await authClient.updateUser(userData);
   }
-  
 
-  const user = userData?.data?.user ;
+
+  const user = userData?.data?.user;
   return (
     <div className="bg-white border border-surface-container-high rounded-2xl p-8 flex flex-col items-center max-w-sm container mx-auto mt-6 shadow-2xl">
       {/* Profile Image */}
@@ -59,9 +59,12 @@ const UserCard = () => {
               <Modal.CloseTrigger />
               <Modal.Header>
                 <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                  {/* <FaEnvelope /> */}
+                  <img src={user.image}
+                    alt={user.name}
+                    className="w-12 h-12 rounded-full object-cover relative z-10 border-4 border-white shadow-sm"
+                  />
                 </Modal.Icon>
-                <Modal.Heading>Edit Profile</Modal.Heading>
+                <Modal.Heading>{user?.name || 'John Doe'}</Modal.Heading>
                 <p className="mt-1.5 text-sm leading-5 text-muted">
                   Edit your profile information and preferences here.
                 </p>
