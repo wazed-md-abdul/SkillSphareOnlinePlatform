@@ -55,7 +55,7 @@ const CourseDetails = async ({ params }) => {
                 />
                 <div>
                   <p className="text-xs uppercase tracking-widest font-bold text-outline">Lead Instructor</p>
-                  <p className="font-bold text-on-surface">{course?.author || "Julian V. Atelier"}</p>
+                  <p className="font-bold text-on-surface">{course?.author || "Julian"}</p>
                 </div>
               </div>
               <p className="text-lg text-secondary leading-relaxed max-w-2xl">

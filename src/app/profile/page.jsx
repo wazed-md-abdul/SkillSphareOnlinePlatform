@@ -59,8 +59,8 @@ const UserCard = () => {
               <Modal.CloseTrigger />
               <Modal.Header>
                 <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                  <img src={user.image}
-                    alt={user.name}
+                  <img src={user?.image}
+                    alt={user?.name}
                     className="w-12 h-12 rounded-full object-cover relative z-10 border-4 border-white shadow-sm"
                   />
                 </Modal.Icon>
