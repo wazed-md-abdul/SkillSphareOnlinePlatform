@@ -8,7 +8,10 @@ const Register = () => {
     const onSubmit = async (e) => {
         e.preventDefault();
         const formDataObj = Object.fromEntries(new FormData(e.currentTarget));
-        const {data,error} = await authClient.signUp.email(formDataObj);
+        const {data,error} = await authClient.signUp.email({
+            ...formDataObj,
+            callbackURL: "/",
+        });
         if(error){
             toast.warning(`${error.message}`, {
               actionProps: {
