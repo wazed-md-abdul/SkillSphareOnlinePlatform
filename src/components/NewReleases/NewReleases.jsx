@@ -1,12 +1,14 @@
 import React from 'react';
-import CourseCard from './CourseCard';
+import CourseCard from './NewReleasesCard';
 import { getAllCourses } from '@/lib/data';
+import { filter } from 'framer-motion/client';
 
 
-const CoursePathways = async () => {
+const NewReleases = async () => {
 const allcourses = await getAllCourses();
   const courses = allcourses?.data || [];
-  const fillteredCourses = courses.filter((course)=> course.rating >= 4.9);
+  const fillteredCourse = courses.filter((course)=> course.level === "Beginner" );
+  const fillteredCourses = fillteredCourse.slice(0, 3);
 
   
 
@@ -19,14 +21,14 @@ const allcourses = await getAllCourses();
       {/* Section Header */}
       <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
         <div className="max-w-2xl">
-          <span className="text-primary font-label font-bold tracking-widest text-xs uppercase mb-4 block">Popular Pathways</span>
+          <span className="text-primary font-label font-bold tracking-widest text-xs uppercase mb-4 block">New Releases</span>
           <h1 className="text-5xl md:text-6xl font-display font-extrabold tracking-tight text-on-surface leading-[1.1]">
-            Master the art of <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-fixed-dim">Popular Creation.</span>
+            Fresh skills just dropped  <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-fixed-dim">explore our newest courses and stay ahead.</span>
           </h1>
         </div>
         <div className="flex items-center gap-4 bg-surface-container-low p-2 rounded-full">
-          <button className="bg-primary text-on-primary px-6 py-3 rounded-full font-label font-bold text-sm shadow-lg shadow-primary/20 cursor-pointer">Popular</button>
+          <button className="bg-primary text-on-primary px-6 py-3 rounded-full font-label font-bold text-sm shadow-lg shadow-primary/20 cursor-pointer">NewReleases</button>
 
         </div>
       </div>
@@ -67,4 +69,4 @@ const allcourses = await getAllCourses();
   );
 };
 
-export default CoursePathways;
+export default NewReleases;
