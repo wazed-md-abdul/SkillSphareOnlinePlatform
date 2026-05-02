@@ -2,6 +2,7 @@
 import React from 'react';
 import { CiEdit } from "react-icons/ci";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import {toast,Toast} from "@heroui/react";
 import { authClient } from '@/lib/auth-client';
 
 const UserCard = () => {
@@ -72,11 +73,11 @@ const UserCard = () => {
               <Modal.Body className="p-6">
                 <Surface variant="default">
                   <form onSubmit={onsubmit} className="flex flex-col gap-4">
-                    <TextField className="w-full" name="name" type="text">
+                    <TextField isRequired className="w-full" name="name" type="text">
                       <Label>Name</Label>
                       <Input placeholder="Enter your name" />
                     </TextField>
-                    <TextField className="w-full" name="image" type="text">
+                    <TextField isRequired className="w-full" name="image" type="text">
                       <Label>Image URL</Label>
                       <Input placeholder="Enter the URL of your profile image" />
                     </TextField>
@@ -84,7 +85,7 @@ const UserCard = () => {
                       <Button slot="close" variant='danger'>
                         Cancel
                       </Button>
-                      <Button slot="close" type="submit" className="bg-on-surface text-tertiary-fixed font-headline px-8 py-4 rounded-full font-bold text-sm shadow-[0px_20px_40px_rgba(25,28,29,0.15)] hover:shadow-none transition-all duration-500 flex items-center gap-3 active:scale-95 cursor-pointer">Update Profile</Button>
+                      <Button  type="submit" slot="close" className="bg-on-surface text-tertiary-fixed font-headline px-8 py-4 rounded-full font-bold text-sm shadow-[0px_20px_40px_rgba(25,28,29,0.15)] hover:shadow-none transition-all duration-500 flex items-center gap-3 active:scale-95 cursor-pointer">Update Profile</Button>
                     </Modal.Footer>
                   </form>
                 </Surface>
@@ -93,6 +94,7 @@ const UserCard = () => {
           </Modal.Container>
         </Modal.Backdrop>
       </Modal>
+        <Toast.Provider />
     </div>
   );
 };

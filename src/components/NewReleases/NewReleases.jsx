@@ -41,30 +41,7 @@ const allcourses = await getAllCourses();
       </div>
 
       {/* Asymmetric Promotion Section */}
-      <div className="mt-32 relative bg-surface-container-low rounded-xl p-12 md:p-20 overflow-hidden">
-        <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <h2 className="text-4xl md:text-5xl font-display font-black text-on-surface leading-tight">Beyond the standard <br /> learning curve.</h2>
-            <p className="text-on-surface-variant text-lg leading-relaxed font-body max-w-md">Our curriculum is designed for the modern life. We don't just teach skills; we cultivate a signature perspective through hands-on mentorship and high-fidelity project work.</p>
-            <div className="flex flex-wrap gap-4">
-              {["Curated Mentors", "Project Based", "Lifetime Access"].map((tag) => (
-                <div key={tag} className="flex items-center gap-2 bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-                  <span className="material-symbols-outlined text-primary text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                  <span className="text-sm font-bold text-on-surface">{tag}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="relative">
-            <div className="aspect-square bg-gradient-to-br from-primary-container to-surface-container rounded-lg rotate-3 absolute -inset-4 opacity-30"></div>
-            <img 
-              className="relative z-10 rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer" 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbOUR53RxKIeVSv0TgsXd2D4NlxLH6Xzo1xgkktisNvRWAna9a__SsvUplYdUDv-vid1QSAg9G3PX3R4ocjUwXTWybrRagP8mkm5Mf0b-Z0Vl8SsP9WHfclCbn-ixyQuYHe8VfcqwaNTCHgR_hZI23KtXVfCJrkq0ddvFpuNO9u5SsLyhsOl47TcW9Nxn05nAEKNpfwpe6F4z50vPDuwV6SS1m31cU9bUjNUqVrRyt_XQ6mu5jMFt0x9RN6Y_wu4uuhwZTXYL0y1Fx" 
-              alt="Collaboration" 
-            />
-          </div>
-        </div>
-      </div>
+      
     </main>
   );
 };
