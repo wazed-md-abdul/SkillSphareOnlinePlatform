@@ -11,6 +11,8 @@ const UserCard = () => {
   const onsubmit = async (e) => {
     e.preventDefault();
     const userData = Object.fromEntries(new FormData(e.target));
+    console.log(userData);
+    
     await authClient.updateUser(userData);
   }
 

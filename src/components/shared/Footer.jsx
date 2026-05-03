@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="font-body text-sm text-[#191c1d]/70">
-          © 2024 SkillSphare. All rights reserved.
+          © 2026 SkillSphare. All rights reserved.
         </div>
       </div>
     </footer>

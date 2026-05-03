@@ -2,13 +2,19 @@
 
 import Link from 'next/link';
 import React from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import {toast,Toast} from "@heroui/react";
 import { authClient } from '@/lib/auth-client';
 
 const LoginPanel = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get('callbackUrl') || '/';
+
   const googleAuth =  async () => {
       await authClient.signIn.social({
       provider: "google",
+      callbackURL: callbackUrl,
     })
   }
 
@@ -19,7 +25,7 @@ const LoginPanel = () => {
     const {data,error} = await authClient.signIn.email(
       {
         ...formDataObj,
-      callbackURL: "/",
+      callbackURL: callbackUrl,
       rememberMe: true,
       }
     );
@@ -32,15 +38,17 @@ const LoginPanel = () => {
           },
           description: "Invalid Credentials",
         })
+        return;
     }
     if(data){
-        toast.success("You have Successfully signed up", {
+        toast.success("You have Successfully signed in", {
           actionProps: {
             children: "Success",
             className: "bg-success text-success-foreground",
           },
-          description: "Successfully Logged In",
+          description: "Redirecting to your original page",
         })
+        router.push(callbackUrl);
     }
 
 
