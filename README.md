@@ -1,5 +1,6 @@
-<div align="center">
 ### SkillSphare
+<div align="center">
+
 <br/>
 <br/>
 <br/>
