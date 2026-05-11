@@ -1,5 +1,5 @@
 <div align="center">
- <text font-family="sans-serif" text-anchor="middle" font-size="25" text-color="#00B8DB" font-bold="700" > SkillsSphare</text>
+ SkillSphare
 <br/>
 <br/>
 <br/>
