@@ -1,8 +1,14 @@
 <div align="center">
+ <text font-family="sans-serif" text-anchor="middle" font-size="25" text-color="#00B8DB" font-bold="700" > SkillsSphare</text>
+<br/>
+<br/>
+<br/>
 
-<!-- Typing animation via external service (GitHub safe) -->
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=13&duration=3000&pause=1000&color=2DD4BF&center=true&vCenter=true&multiline=true&width=600&height=30&lines=Discover+%E2%80%A2+Learn+%E2%80%A2+Practice+%E2%80%A2+Improve" alt="Typing SVG"/>
 
+<br/>
+<br/>
+<br/>
 <br/>
 
 <!-- Animated SVG Banner — SMIL only, GitHub-compatible -->
