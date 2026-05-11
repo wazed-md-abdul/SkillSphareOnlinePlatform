@@ -1,5 +1,5 @@
 <div align="center">
- SkillSphare
+# SkillSphare
 <br/>
 <br/>
 <br/>
@@ -108,33 +108,7 @@
   </text>
   <text x="752" y="140" text-anchor="middle" font-size="10" fill="#34D399" font-family="sans-serif" font-weight="700" letter-spacing="1.5">IMPROVE</text>
 
-  <!-- Path lines (static dashed) -->
-  <path d="M 130 96 Q 210 60 302 68" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-  <path d="M 342 76 Q 430 110 518 128" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-  <path d="M 558 126 Q 645 110 730 100" fill="none" stroke="#C084FC" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-
-  <!-- Travelling dot: Discover → Learn -->
-  <circle r="5" fill="#2DD4BF">
-    <animateMotion dur="2.2s" repeatCount="indefinite" begin="0s" path="M 130 96 Q 210 60 302 68"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Travelling dot: Learn → Practice -->
-  <circle r="5" fill="#818CF8">
-    <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s" path="M 342 76 Q 430 110 518 128"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-
-  <!-- Travelling dot: Practice → Improve -->
-  <circle r="5" fill="#C084FC">
-    <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.6s" path="M 558 126 Q 645 110 730 100"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite" begin="1.6s"/>
-  </circle>
-
-  <!-- Bottom accent bar -->
-  <rect x="50" y="186" width="760" height="3" rx="2" fill="url(#grad1)">
-    <animate attributeName="fill-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
-  </rect>
+  
 </svg>
 
 <br/>
