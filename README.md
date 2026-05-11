@@ -1,5 +1,5 @@
 <div align="center">
-# SkillSphare
+#SkillSphare
 <br/>
 <br/>
 <br/>
@@ -51,64 +51,6 @@
   <line x1="215" y1="0" x2="215" y2="200" stroke="#21262D" stroke-width="1"/>
   <line x1="430" y1="0" x2="430" y2="200" stroke="#21262D" stroke-width="1"/>
   <line x1="645" y1="0" x2="645" y2="200" stroke="#21262D" stroke-width="1"/>
-
-  <!-- NODE 1: Discover -->
-  <circle cx="108" cy="100" r="38" fill="#2DD4BF" fill-opacity="0.08">
-    <animate attributeName="r" values="38;44;38" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="108" cy="100" r="22" fill="url(#teal)">
-    <animate attributeName="cy" values="100;93;100" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <text x="108" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
-    <animate attributeName="y" values="104;97;104" dur="3s" repeatCount="indefinite"/>
-    🔍
-  </text>
-  <text x="108" y="140" text-anchor="middle" font-size="10" fill="#2DD4BF" font-family="sans-serif" font-weight="700" letter-spacing="1.5">DISCOVER</text>
-
-  <!-- NODE 2: Learn -->
-  <circle cx="322" cy="70" r="34" fill="#818CF8" fill-opacity="0.08">
-    <animate attributeName="r" values="34;40;34" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-  </circle>
-  <circle cx="322" cy="70" r="20" fill="url(#indigo)">
-    <animate attributeName="cy" values="70;63;70" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-  </circle>
-  <text x="322" y="74" text-anchor="middle" font-size="14" font-family="sans-serif">
-    <animate attributeName="y" values="74;67;74" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-    📚
-  </text>
-  <text x="322" y="108" text-anchor="middle" font-size="10" fill="#818CF8" font-family="sans-serif" font-weight="700" letter-spacing="1.5">LEARN</text>
-
-  <!-- NODE 3: Practice -->
-  <circle cx="538" cy="130" r="34" fill="#C084FC" fill-opacity="0.08">
-    <animate attributeName="r" values="34;40;34" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-  <circle cx="538" cy="130" r="20" fill="url(#purple)">
-    <animate attributeName="cy" values="130;122;130" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-  <text x="538" y="134" text-anchor="middle" font-size="14" font-family="sans-serif">
-    <animate attributeName="y" values="134;126;134" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-    ⚡
-  </text>
-  <text x="538" y="168" text-anchor="middle" font-size="10" fill="#C084FC" font-family="sans-serif" font-weight="700" letter-spacing="1.5">PRACTICE</text>
-
-  <!-- NODE 4: Improve -->
-  <circle cx="752" cy="100" r="38" fill="#34D399" fill-opacity="0.08">
-    <animate attributeName="r" values="38;44;38" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-  </circle>
-  <circle cx="752" cy="100" r="22" fill="url(#green)">
-    <animate attributeName="cy" values="100;93;100" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-  </circle>
-  <text x="752" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
-    <animate attributeName="y" values="104;97;104" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-    🏆
-  </text>
-  <text x="752" y="140" text-anchor="middle" font-size="10" fill="#34D399" font-family="sans-serif" font-weight="700" letter-spacing="1.5">IMPROVE</text>
-
-  
 </svg>
 
 <br/>
