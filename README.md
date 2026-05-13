@@ -51,9 +51,7 @@
   <line x1="430" y1="0" x2="430" y2="200" stroke="#21262D" stroke-width="1"/>
   <line x1="645" y1="0" x2="645" y2="200" stroke="#21262D" stroke-width="1"/>
 </svg>
-
 <br/>
-
 <p>
   <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
   <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
