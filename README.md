@@ -1,4 +1,4 @@
-### SkillSphare
+## SkillSphare
 <div align="center">
 
 <br/>
