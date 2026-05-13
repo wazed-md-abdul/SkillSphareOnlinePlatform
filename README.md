@@ -285,7 +285,6 @@ Contributions are welcome!
 4. **Push** your branch: `git push origin feature/amazing-feature`
 5. **Open** a Pull Request
 
-Please make sure `npm run lint` passes before submitting.
 
 ---
 
