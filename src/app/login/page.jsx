@@ -15,6 +15,8 @@ export default function LoginPage() {
       <main className="relative z-10 w-full min-w-0 max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-stretch md:items-center justify-center gap-8 md:gap-12">
         <LoginBranding />
         <LoginPanel />
+        
+        
       </main>
     </div>
     </>

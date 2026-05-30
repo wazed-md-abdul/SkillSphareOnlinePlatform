@@ -10,6 +10,7 @@ import { authClient } from "@/lib/auth-client";
 const navItems = [
     { name: "Home", href: "/" },
     { name: "All Courses", href: "/allcourses" },
+    { name: "Blogs", href: "/blogs" },
     { name: "My Profile", href: "/profile" },
 ];
 

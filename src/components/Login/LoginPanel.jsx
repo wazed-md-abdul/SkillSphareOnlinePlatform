@@ -1,16 +1,23 @@
 "use client";
-
 import Link from 'next/link';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {toast,Toast} from "@heroui/react";
 import { authClient } from '@/lib/auth-client';
 
 const LoginPanel = () => {
   const router = useRouter();
+  console.log(router);
+  
+  
   const searchParams = useSearchParams();
+  console.log(searchParams);
+  
+  
   const callbackUrl = searchParams.get('callbackUrl') || '/';
 
+  // console.log(callbackUrl);
+  
   const googleAuth =  async () => {
       await authClient.signIn.social({
       provider: "google",
