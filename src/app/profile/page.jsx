@@ -102,7 +102,7 @@ const UserCard = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white border border-outline-variant/10 rounded-3xl p-6 md:p-8 flex flex-col items-center shadow-md relative"
+            className="bg-surface-container-lowest border border-outline-variant/10 rounded-3xl p-6 md:p-8 flex flex-col items-center shadow-md relative"
           >
             {/* Membership badge */}
             <span className="absolute top-4 right-4 bg-primary/10 text-primary border border-primary/20 px-3 py-1 rounded-full text-[10px] font-label font-bold uppercase tracking-wider">
@@ -195,7 +195,7 @@ const UserCard = () => {
               {/* Sign Out Button */}
               <button 
                 onClick={() => authClient.signOut()}
-                className="w-full bg-[#111111] hover:bg-red-600 hover:text-white text-[#FFDE42] font-label px-6 py-3 rounded-full font-bold text-sm shadow-sm flex items-center justify-center gap-2 active:scale-98 transition-all cursor-pointer border border-[#111111]"
+                className="w-full bg-on-surface hover:bg-red-600 hover:text-white text-tertiary-fixed font-label px-6 py-3 rounded-full font-bold text-sm shadow-sm flex items-center justify-center gap-2 active:scale-98 transition-all cursor-pointer border border-outline-variant/10"
               >
                 <IoLogOutOutline className="text-lg" /> Sign Out
               </button>

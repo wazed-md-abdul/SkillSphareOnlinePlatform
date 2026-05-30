@@ -65,17 +65,17 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-primary">
                   <span className="material-symbols-outlined">auto_awesome</span>
                 </div>
-                <span className="font-headline font-bold text-sm">AI-Driven Path</span>
+                <span className="font-headline font-bold text-sm text-on-surface">AI-Driven Path</span>
               </div>
               <p className="text-xs text-on-surface-variant leading-relaxed">Personalized learning tracks tailored to your unique career goals and speed.</p>
             </div>
-            <div className="absolute top-12 -right-8 glass-panel bg-on-surface p-5 rounded-lg shadow-xl max-w-[200px]">
+            <div className="absolute top-12 -right-8 bg-[#191c1d]/90 backdrop-blur-md p-5 rounded-lg shadow-xl max-w-[200px] border border-white/10">
               <div className="flex -space-x-3 mb-3">
-                <div className="w-8 h-8 rounded-full border-2 border-on-surface bg-primary-fixed"></div>
-                <div className="w-8 h-8 rounded-full border-2 border-on-surface bg-secondary-fixed"></div>
-                <div className="w-8 h-8 rounded-full border-2 border-on-surface bg-tertiary-fixed"></div>
+                <div className="w-8 h-8 rounded-full border-2 border-[#191c1d] bg-primary-fixed"></div>
+                <div className="w-8 h-8 rounded-full border-2 border-[#191c1d] bg-secondary-fixed"></div>
+                <div className="w-8 h-8 rounded-full border-2 border-[#191c1d] bg-tertiary-fixed"></div>
               </div>
-              <p className="text-[10px] font-label font-bold text-tertiary-fixed uppercase tracking-widest">Join 5,000+ others</p>
+              <p className="text-[10px] font-label font-bold text-[#ffe083] uppercase tracking-widest font-display">Join 5,000+ others</p>
             </div>
             <div className="absolute -top-4 left-1/4 w-32 h-32 border-2 border-primary/20 rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
               <div className="w-2 h-2 bg-primary rounded-full absolute -top-1"></div>

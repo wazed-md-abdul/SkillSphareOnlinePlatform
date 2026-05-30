@@ -1,53 +1,153 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
 
+:root {
+  /* Default Theme: Dark Mode */
+  --tertiary-fixed: #191c1d;
+  --primary-container: #00513d;
+  --on-secondary-fixed: #e5e2e1;
+  --on-primary-container: #8ff6d0;
+  --primary: #3de0b3;
+  --on-primary-fixed-variant: #8ff6d0;
+  --secondary: #a8a8a8;
+  --inverse-on-surface: #191c1d;
+  --error-container: #93000a;
+  --surface-bright: #1d2123;
+  --on-surface-variant: #bdc9c2;
+  --secondary-fixed: #2f3131;
+  --on-primary-fixed: #002117;
+  --surface-tint: #3de0b3;
+  --surface-dim: #0a0d0e;
+  --tertiary-fixed-dim: #191c1d;
+  --primary-fixed: #8ff6d0;
+  --outline: #89938d;
+  --on-background: #e1e3e4;
+  --on-secondary-fixed-variant: #c8c6c5;
+  --on-error-container: #ffdad6;
+  --inverse-primary: #006c52;
+  --on-primary: #003829;
+  --surface-container-highest: #353a3e;
+  --primary-fixed-dim: #73d9b5;
+  --secondary-container: #2f3131;
+  --outline-variant: #414945;
+  --tertiary-container: #574500;
+  --on-tertiary-fixed-variant: #ffeab1;
+  --on-secondary-container: #c8c6c5;
+  --error: #ffb4ab;
+  --on-surface: #e1e3e4;
+  --secondary-fixed-dim: #c8c6c5;
+  --tertiary: #ffe083;
+  --on-tertiary-fixed: #231b00;
+  --surface: #0f1213;
+  --surface-container-low: #16191b;
+  --surface-container: #1d2123;
+  --inverse-surface: #e1e3e4;
+  --on-error: #690005;
+  --on-secondary: #2f3131;
+  --on-tertiary-container: #ffeab1;
+  --surface-container-lowest: #0a0d0e;
+  --surface-container-high: #24282b;
+  --surface-variant: #414945;
+  --background: #0f1213;
+}
+
+.light {
+  /* Alternate Theme: Light Mode */
+  --tertiary-fixed: #ffe083;
+  --primary-container: #98ffd9;
+  --on-secondary-fixed: #1c1b1b;
+  --on-primary-container: #00785c;
+  --primary: #006c52;
+  --on-primary-fixed-variant: #00513d;
+  --secondary: #5f5e5e;
+  --inverse-on-surface: #f0f1f2;
+  --error-container: #ffdad6;
+  --surface-bright: #f8f9fa;
+  --on-surface-variant: #3e4944;
+  --secondary-fixed: #e5e2e1;
+  --on-primary-fixed: #002117;
+  --surface-tint: #006c52;
+  --surface-dim: #d9dadb;
+  --tertiary-fixed-dim: #eec200;
+  --primary-fixed: #8ff6d0;
+  --outline: #6e7a74;
+  --on-background: #191c1d;
+  --on-secondary-fixed-variant: #474646;
+  --on-error-container: #93000a;
+  --inverse-primary: #73d9b5;
+  --on-primary: #ffffff;
+  --surface-container-highest: #e1e3e4;
+  --primary-fixed-dim: #73d9b5;
+  --secondary-container: #e5e2e1;
+  --outline-variant: #bdc9c2;
+  --tertiary-container: #ffeab1;
+  --on-tertiary-fixed-variant: #574500;
+  --on-secondary-container: #656464;
+  --error: #ba1a1a;
+  --on-surface: #191c1d;
+  --secondary-fixed-dim: #c8c6c5;
+  --tertiary: #735c00;
+  --on-tertiary-fixed: #231b00;
+  --surface: #f8f9fa;
+  --surface-container-low: #f3f4f5;
+  --surface-container: #edeeef;
+  --inverse-surface: #2e3132;
+  --on-error: #ffffff;
+  --on-secondary: #ffffff;
+  --on-tertiary-container: #806700;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #e7e8e9;
+  --surface-variant: #e1e3e4;
+  --background: #f8f9fa;
+}
+
 @theme {
-  --color-tertiary-fixed: #ffe083;
-  --color-primary-container: #98ffd9;
-  --color-on-secondary-fixed: #1c1b1b;
-  --color-on-primary-container: #00785c;
-  --color-primary: #006c52;
-  --color-on-primary-fixed-variant: #00513d;
-  --color-secondary: #5f5e5e;
-  --color-inverse-on-surface: #f0f1f2;
-  --color-error-container: #ffdad6;
-  --color-surface-bright: #f8f9fa;
-  --color-on-surface-variant: #3e4944;
-  --color-secondary-fixed: #e5e2e1;
-  --color-on-primary-fixed: #002117;
-  --color-surface-tint: #006c52;
-  --color-surface-dim: #d9dadb;
-  --color-tertiary-fixed-dim: #eec200;
-  --color-primary-fixed: #8ff6d0;
-  --color-outline: #6e7a74;
-  --color-on-background: #191c1d;
-  --color-on-secondary-fixed-variant: #474646;
-  --color-on-error-container: #93000a;
-  --color-inverse-primary: #73d9b5;
-  --color-on-primary: #ffffff;
-  --color-surface-container-highest: #e1e3e4;
-  --color-primary-fixed-dim: #73d9b5;
-  --color-secondary-container: #e5e2e1;
-  --color-outline-variant: #bdc9c2;
-  --color-tertiary-container: #ffeab1;
-  --color-on-tertiary-fixed-variant: #574500;
-  --color-on-secondary-container: #656464;
-  --color-error: #ba1a1a;
-  --color-on-surface: #191c1d;
-  --color-secondary-fixed-dim: #c8c6c5;
-  --color-tertiary: #735c00;
-  --color-on-tertiary-fixed: #231b00;
-  --color-surface: #f8f9fa;
-  --color-surface-container-low: #f3f4f5;
-  --color-surface-container: #edeeef;
-  --color-inverse-surface: #2e3132;
-  --color-on-error: #ffffff;
-  --color-on-secondary: #ffffff;
-  --color-on-tertiary-container: #806700;
-  --color-surface-container-lowest: #ffffff;
-  --color-surface-container-high: #e7e8e9;
-  --color-surface-variant: #e1e3e4;
-  --color-background: #f8f9fa;
+  --color-tertiary-fixed: var(--tertiary-fixed);
+  --color-primary-container: var(--primary-container);
+  --color-on-secondary-fixed: var(--on-secondary-fixed);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-primary: var(--primary);
+  --color-on-primary-fixed-variant: var(--on-primary-fixed-variant);
+  --color-secondary: var(--secondary);
+  --color-inverse-on-surface: var(--inverse-on-surface);
+  --color-error-container: var(--error-container);
+  --color-surface-bright: var(--surface-bright);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-secondary-fixed: var(--secondary-fixed);
+  --color-on-primary-fixed: var(--on-primary-fixed);
+  --color-surface-tint: var(--surface-tint);
+  --color-surface-dim: var(--surface-dim);
+  --color-tertiary-fixed-dim: var(--tertiary-fixed-dim);
+  --color-primary-fixed: var(--primary-fixed);
+  --color-outline: var(--outline);
+  --color-on-background: var(--on-background);
+  --color-on-secondary-fixed-variant: var(--on-secondary-fixed-variant);
+  --color-on-error-container: var(--on-error-container);
+  --color-inverse-primary: var(--inverse-primary);
+  --color-on-primary: var(--on-primary);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-primary-fixed-dim: var(--primary-fixed-dim);
+  --color-secondary-container: var(--secondary-container);
+  --color-outline-variant: var(--outline-variant);
+  --color-tertiary-container: var(--tertiary-container);
+  --color-on-tertiary-fixed-variant: var(--on-tertiary-fixed-variant);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-error: var(--error);
+  --color-on-surface: var(--on-surface);
+  --color-secondary-fixed-dim: var(--secondary-fixed-dim);
+  --color-tertiary: var(--tertiary);
+  --color-on-tertiary-fixed: var(--on-tertiary-fixed);
+  --color-surface: var(--surface);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-inverse-surface: var(--inverse-surface);
+  --color-on-error: var(--on-error);
+  --color-on-secondary: var(--on-secondary);
+  --color-on-tertiary-container: var(--on-tertiary-container);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-variant: var(--surface-variant);
+  --color-background: var(--background);
 
   --font-headline: var(--font-plus-jakarta-sans), sans-serif;
   --font-display: var(--font-plus-jakarta-sans), sans-serif;
@@ -63,19 +163,30 @@
   body {
     @apply bg-surface font-body text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container;
   }
+  
+  /* Smooth theme transitions */
+  body, div, section, aside, header, nav, button, p, span, h1, h2, h3, h4, h5, h6, Link, a, li, ul, select, input {
+    transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
-
 
 @layer utilities {
   .glass-card {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
   }
   .glass-panel {
-    background: rgba(248, 249, 250, 0.7);
+    background: rgba(25, 28, 29, 0.7);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+  }
+  
+  .light .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+  }
+  .light .glass-panel {
+    background: rgba(248, 249, 250, 0.75);
   }
   .text-glow {
     text-shadow: 0 0 20px rgba(152, 255, 217, 0.4);
