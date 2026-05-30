@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import BlogCard from "./BlogCard";
+import { motion } from "framer-motion";
 
 const BlogsSection = ({ blogs }) => {
   const categories = [...new Set(blogs.map((b) => b.category))];
@@ -17,7 +18,13 @@ const BlogsSection = ({ blogs }) => {
       <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-tertiary/5 rounded-full blur-3xl pointer-events-none"></div>
 
       {/* Section Header */}
-      <div className="mb-16 relative z-10">
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-16 relative z-10"
+      >
         <span className="text-primary font-label font-bold tracking-widest text-xs uppercase mb-4 block">
           SkillSphare Blog
         </span>
@@ -30,10 +37,16 @@ const BlogsSection = ({ blogs }) => {
         <p className="text-xl text-on-surface-variant max-w-2xl font-body">
           How-to guides, success stories, alumni spotlights, and everything you need to make the most of your learning journey.
         </p>
-      </div>
+      </motion.div>
 
       {/* Category Filter */}
-      <div className="mb-12 flex flex-wrap items-center gap-3 relative z-10 rounded-3xl">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="mb-12 flex flex-wrap items-center gap-3 relative z-10 rounded-3xl"
+      >
         <button
           onClick={() => setActiveCategory("All")}
           className={`px-5 py-2.5 rounded-full font-label font-bold text-sm transition-all cursor-pointer ${
@@ -57,7 +70,7 @@ const BlogsSection = ({ blogs }) => {
             {cat}
           </button>
         ))}
-      </div>
+      </motion.div>
 
       {/* Blog Cards Grid */}
       {filteredBlogs.length === 0 ? (
@@ -69,7 +82,15 @@ const BlogsSection = ({ blogs }) => {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
           {filteredBlogs.map((blog, idx) => (
-            <BlogCard key={idx} blog={blog} />
+            <motion.div
+              key={blog.slug || idx}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: (idx % 3) * 0.1 }}
+            >
+              <BlogCard blog={blog} />
+            </motion.div>
           ))}
         </div>
       )}

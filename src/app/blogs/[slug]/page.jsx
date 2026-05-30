@@ -14,5 +14,7 @@ export default async function BlogPost({ params }) {
 
   if (!blog) notFound();
 
-  return <BlogContent blog={blog} />;
+  const relatedBlogs = blogs.filter((b) => b.slug !== slug).slice(0, 3);
+
+  return <BlogContent blog={blog} relatedBlogs={relatedBlogs} />;
 }

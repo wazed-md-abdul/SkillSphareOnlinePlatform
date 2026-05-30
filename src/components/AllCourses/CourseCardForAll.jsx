@@ -1,4 +1,3 @@
-import { getAllCourses } from '@/lib/data';
 import Link from 'next/link';
 import React from 'react';
 
