@@ -1,8 +1,13 @@
+## SkillSphare
 <div align="center">
-
-<!-- Typing animation via external service (GitHub safe) -->
+<br/>
+<br/>
+<br/>
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=13&duration=3000&pause=1000&color=2DD4BF&center=true&vCenter=true&multiline=true&width=600&height=30&lines=Discover+%E2%80%A2+Learn+%E2%80%A2+Practice+%E2%80%A2+Improve" alt="Typing SVG"/>
 
+<br/>
+<br/>
+<br/>
 <br/>
 
 <!-- Animated SVG Banner — SMIL only, GitHub-compatible -->
@@ -45,94 +50,8 @@
   <line x1="215" y1="0" x2="215" y2="200" stroke="#21262D" stroke-width="1"/>
   <line x1="430" y1="0" x2="430" y2="200" stroke="#21262D" stroke-width="1"/>
   <line x1="645" y1="0" x2="645" y2="200" stroke="#21262D" stroke-width="1"/>
-
-  <!-- NODE 1: Discover -->
-  <circle cx="108" cy="100" r="38" fill="#2DD4BF" fill-opacity="0.08">
-    <animate attributeName="r" values="38;44;38" dur="3s" repeatCount="indefinite"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="108" cy="100" r="22" fill="url(#teal)">
-    <animate attributeName="cy" values="100;93;100" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <text x="108" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
-    <animate attributeName="y" values="104;97;104" dur="3s" repeatCount="indefinite"/>
-    🔍
-  </text>
-  <text x="108" y="140" text-anchor="middle" font-size="10" fill="#2DD4BF" font-family="sans-serif" font-weight="700" letter-spacing="1.5">DISCOVER</text>
-
-  <!-- NODE 2: Learn -->
-  <circle cx="322" cy="70" r="34" fill="#818CF8" fill-opacity="0.08">
-    <animate attributeName="r" values="34;40;34" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-  </circle>
-  <circle cx="322" cy="70" r="20" fill="url(#indigo)">
-    <animate attributeName="cy" values="70;63;70" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-  </circle>
-  <text x="322" y="74" text-anchor="middle" font-size="14" font-family="sans-serif">
-    <animate attributeName="y" values="74;67;74" dur="3.4s" repeatCount="indefinite" begin="0.4s"/>
-    📚
-  </text>
-  <text x="322" y="108" text-anchor="middle" font-size="10" fill="#818CF8" font-family="sans-serif" font-weight="700" letter-spacing="1.5">LEARN</text>
-
-  <!-- NODE 3: Practice -->
-  <circle cx="538" cy="130" r="34" fill="#C084FC" fill-opacity="0.08">
-    <animate attributeName="r" values="34;40;34" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-  <circle cx="538" cy="130" r="20" fill="url(#purple)">
-    <animate attributeName="cy" values="130;122;130" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-  <text x="538" y="134" text-anchor="middle" font-size="14" font-family="sans-serif">
-    <animate attributeName="y" values="134;126;134" dur="2.8s" repeatCount="indefinite" begin="0.8s"/>
-    ⚡
-  </text>
-  <text x="538" y="168" text-anchor="middle" font-size="10" fill="#C084FC" font-family="sans-serif" font-weight="700" letter-spacing="1.5">PRACTICE</text>
-
-  <!-- NODE 4: Improve -->
-  <circle cx="752" cy="100" r="38" fill="#34D399" fill-opacity="0.08">
-    <animate attributeName="r" values="38;44;38" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-    <animate attributeName="fill-opacity" values="0.08;0.16;0.08" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-  </circle>
-  <circle cx="752" cy="100" r="22" fill="url(#green)">
-    <animate attributeName="cy" values="100;93;100" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-  </circle>
-  <text x="752" y="104" text-anchor="middle" font-size="16" font-family="sans-serif">
-    <animate attributeName="y" values="104;97;104" dur="3.2s" repeatCount="indefinite" begin="0.2s"/>
-    🏆
-  </text>
-  <text x="752" y="140" text-anchor="middle" font-size="10" fill="#34D399" font-family="sans-serif" font-weight="700" letter-spacing="1.5">IMPROVE</text>
-
-  <!-- Path lines (static dashed) -->
-  <path d="M 130 96 Q 210 60 302 68" fill="none" stroke="#2DD4BF" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-  <path d="M 342 76 Q 430 110 518 128" fill="none" stroke="#818CF8" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-  <path d="M 558 126 Q 645 110 730 100" fill="none" stroke="#C084FC" stroke-width="1.5" stroke-opacity="0.3" stroke-dasharray="5 6"/>
-
-  <!-- Travelling dot: Discover → Learn -->
-  <circle r="5" fill="#2DD4BF">
-    <animateMotion dur="2.2s" repeatCount="indefinite" begin="0s" path="M 130 96 Q 210 60 302 68"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Travelling dot: Learn → Practice -->
-  <circle r="5" fill="#818CF8">
-    <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s" path="M 342 76 Q 430 110 518 128"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.4s" repeatCount="indefinite" begin="0.8s"/>
-  </circle>
-
-  <!-- Travelling dot: Practice → Improve -->
-  <circle r="5" fill="#C084FC">
-    <animateMotion dur="2.2s" repeatCount="indefinite" begin="1.6s" path="M 558 126 Q 645 110 730 100"/>
-    <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite" begin="1.6s"/>
-  </circle>
-
-  <!-- Bottom accent bar -->
-  <rect x="50" y="186" width="760" height="3" rx="2" fill="url(#grad1)">
-    <animate attributeName="fill-opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
-  </rect>
 </svg>
-
 <br/>
-
 <p>
   <img src="https://img.shields.io/badge/Next.js-15-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js"/>
   <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
@@ -366,7 +285,6 @@ Contributions are welcome!
 4. **Push** your branch: `git push origin feature/amazing-feature`
 5. **Open** a Pull Request
 
-Please make sure `npm run lint` passes before submitting.
 
 ---
 
