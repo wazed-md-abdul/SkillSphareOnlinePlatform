@@ -37,6 +37,7 @@ export default function PillNavbar() {
     const user = data?.user;
 
     const [menuOpen, setMenuOpen] = useState(false);
+    const [avatarDropdownOpen, setAvatarDropdownOpen] = useState(false);
     const pathname = usePathname();
 
     const handleNavClick = () => {
@@ -88,34 +89,76 @@ export default function PillNavbar() {
                     {
                         isPending ? (
                             <AuthLoading />
-                        ) : user ? (<div className="hidden items-center gap-4 md:flex"><div><motion.div
-                            whileHover={{ opacity: 0.82, scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="hidden md:block"
-                        >
-                            <button onClick={() => authClient.signOut()}
+                        ) : user ? (
+                            <div className="hidden items-center gap-4 md:flex">
+                                <div className="relative">
+                                    <button 
+                                        onClick={() => setAvatarDropdownOpen(!avatarDropdownOpen)}
+                                        className="flex items-center gap-2 focus:outline-none cursor-pointer group"
+                                    >
+                                        <img 
+                                            src={user.image}
+                                            alt={user.name}
+                                            className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm group-hover:border-primary transition-all"
+                                        />
+                                        <div className="hidden lg:block text-left">
+                                            <p className="text-xs font-bold text-[#2C3947] leading-tight">{user.name}</p>
+                                            <p className="text-[10px] text-[#555555]/85 leading-none">{user.email || ""}</p>
+                                        </div>
+                                        <span className="material-symbols-outlined text-sm text-[#555555] group-hover:text-[#2C3947] transition-colors">
+                                            keyboard_arrow_down
+                                        </span>
+                                    </button>
 
-                                className="flex items-center justify-center gap-2 rounded-full bg-[#111111] px-[22px] py-2 font-inherit text-[14px] font-extrabold tracking-[-0.2px] text-[#FFDE42]"
+                                    {/* Dropdown Menu */}
+                                    <AnimatePresence>
+                                        {avatarDropdownOpen && (
+                                            <>
+                                                {/* Backdrop overlay to close */}
+                                                <div className="fixed inset-0 z-10" onClick={() => setAvatarDropdownOpen(false)} />
+                                                
+                                                <motion.div
+                                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                                    transition={{ duration: 0.15, ease: "easeOut" }}
+                                                    className="absolute right-0 top-[calc(100%+0.75rem)] z-20 w-48 rounded-xl border border-[#e8e8e8] bg-white p-2 shadow-lg"
+                                                >
+                                                    <div className="px-3 py-2 border-b border-[#f0f0f0] mb-1 lg:hidden">
+                                                        <p className="text-xs font-bold text-[#2C3947] leading-tight">{user.name}</p>
+                                                        <p className="text-[9px] text-[#555555]/85 leading-none mt-0.5">{user.email || ""}</p>
+                                                    </div>
+                                                    <button
+                                                        onClick={() => {
+                                                            setAvatarDropdownOpen(false);
+                                                            authClient.signOut();
+                                                        }}
+                                                        className="flex w-full items-center gap-2 rounded-lg px-3 py-2.5 text-left text-xs font-bold text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
+                                                    >
+                                                        <IoLogInSharp className="text-base" />
+                                                        Sign Out
+                                                    </button>
+                                                </motion.div>
+                                            </>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            </div>
+                        ) : (
+                            <motion.div
+                                whileHover={{ opacity: 0.82, scale: 1.03 }}
+                                whileTap={{ scale: 0.97 }}
+                                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                                className="hidden md:block"
                             >
-                                <IoLogInSharp /> Sign Out
-                            </button>
-                        </motion.div></div><div className="flex flex-col items-center"><img src={user.image}
-                            alt={user.name}
-                            className="w-12 h-12 rounded-full object-cover relative z-10 border-4 border-white shadow-sm"
-                        /><h2 className="text-sm font-bold text-on-surface mb-1">{user?.name}</h2></div></div>) : (<motion.div
-                            whileHover={{ opacity: 0.82, scale: 1.03 }}
-                            whileTap={{ scale: 0.97 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                            className="hidden md:block"
-                        >
-                            <Link
-                                href="/login"
-                                className="flex items-center justify-center gap-2 rounded-full bg-[#111111] px-[22px] py-2 font-inherit text-[14px] font-extrabold tracking-[-0.2px] text-[#FFDE42]"
-                            >
-                                <IoLogInSharp /> Login
-                            </Link>
-                        </motion.div>)
+                                <Link
+                                    href="/login"
+                                    className="flex items-center justify-center gap-2 rounded-full bg-[#111111] px-[22px] py-2 font-inherit text-[14px] font-extrabold tracking-[-0.2px] text-[#FFDE42]"
+                                >
+                                    <IoLogInSharp /> Login
+                                </Link>
+                            </motion.div>
+                        )
                     }
 
                     <button
