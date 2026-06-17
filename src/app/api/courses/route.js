@@ -1,42 +1,24 @@
-import { connectToDb, seedDatabase } from "@/lib/db";
 import { NextResponse } from "next/server";
+
+const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "https://skillsphereonlinelearningplatform-s.vercel.app";
 
 export async function GET(request) {
   try {
-    await seedDatabase();
-    const db = await connectToDb();
     const { searchParams } = new URL(request.url);
-
     const q = searchParams.get("q");
     const category = searchParams.get("category");
     const level = searchParams.get("level");
 
-    const query = {};
+    const params = new URLSearchParams();
+    if (q) params.set("q", q);
+    if (category) params.set("category", category);
+    if (level) params.set("level", level);
 
-    if (q) {
-      query.$or = [
-        { title: { $regex: q, $options: "i" } },
-        { description: { $regex: q, $options: "i" } }
-      ];
-    }
-
-    if (category && category !== "all") {
-      query.category = category;
-    }
-
-    if (level && level !== "all") {
-      query.level = level;
-    }
-
-    const courses = await db.collection("courses").find(query).toArray();
-    const sanitizedCourses = courses.map(course => ({
-      ...course,
-      _id: course._id.toString()
-    }));
-
-    return NextResponse.json({ success: true, data: sanitizedCourses });
+    const res = await fetch(`${backendUrl}/api/courses?${params.toString()}`, { cache: 'no-store' });
+    const data = await res.json();
+    return NextResponse.json(data);
   } catch (error) {
-    console.error("Failed to fetch filtered courses:", error);
+    console.error("Failed to proxy fetch filtered courses:", error);
     return NextResponse.json(
       { success: false, error: "Internal Server Error" },
       { status: 500 }

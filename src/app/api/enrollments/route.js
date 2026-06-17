@@ -1,7 +1,8 @@
-import { connectToDb } from "@/lib/db";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+
+const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "https://skillsphereonlinelearningplatform-s.vercel.app";
 
 export async function GET() {
   try {
@@ -9,44 +10,25 @@ export async function GET() {
       headers: await headers()
     });
 
-    if (!session || !session.user) {
+    if (!session || !session.user || !session.session) {
       return NextResponse.json(
         { success: false, error: "Unauthorized. Please log in." },
         { status: 401 }
       );
     }
 
-    const db = await connectToDb();
-    const enrollmentsCol = db.collection("enrollments");
-    const coursesCol = db.collection("courses");
+    const res = await fetch(`${backendUrl}/api/enrollments`, {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${session.session.token}`
+      },
+      cache: 'no-store'
+    });
 
-    const enrollments = await enrollmentsCol
-      .find({ userId: session.user.id })
-      .toArray();
-
-    if (enrollments.length === 0) {
-      return NextResponse.json({ success: true, data: [] });
-    }
-
-    const courseIds = enrollments.map(e => e.courseId);
-    const courses = await coursesCol
-      .find({ id: { $in: courseIds } })
-      .toArray();
-
-    const enrolledCourses = enrollments.map(enrollment => {
-      const course = courses.find(c => c.id === enrollment.courseId);
-      if (!course) return null;
-      return {
-        ...course,
-        _id: course._id.toString(),
-        progress: enrollment.progress ?? 0,
-        lastActive: enrollment.lastActive ?? "Just now"
-      };
-    }).filter(Boolean);
-
-    return NextResponse.json({ success: true, data: enrolledCourses });
+    const data = await res.json();
+    return NextResponse.json(data);
   } catch (error) {
-    console.error("Failed to fetch enrollments:", error);
+    console.error("Failed to proxy fetch enrollments:", error);
     return NextResponse.json(
       { success: false, error: "Internal Server Error" },
       { status: 500 }

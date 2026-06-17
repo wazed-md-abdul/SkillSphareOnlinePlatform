@@ -1,24 +1,23 @@
-import { connectToDb, seedDatabase } from "./db";
+const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "https://skillsphereonlinelearningplatform-s.vercel.app";
 
 export const getAllCourses = async () => {
-  await seedDatabase();
-  const db = await connectToDb();
-  const courses = await db.collection("courses").find({}).toArray();
-  // Map _id to string or omit to avoid Next.js server-to-client component serialization warning
-  const sanitizedCourses = courses.map(course => ({
-    ...course,
-    _id: course._id.toString()
-  }));
-  return { data: sanitizedCourses };
+  try {
+    const res = await fetch(`${backendUrl}/api/courses`, { cache: 'no-store' });
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.error("Failed to fetch courses from backend:", err);
+    return { data: [] };
+  }
 };
 
 export const getAllBlogs = async () => {
-  await seedDatabase();
-  const db = await connectToDb();
-  const blogs = await db.collection("blogs").find({}).toArray();
-  const sanitizedBlogs = blogs.map(blog => ({
-    ...blog,
-    _id: blog._id.toString()
-  }));
-  return sanitizedBlogs;
+  try {
+    const res = await fetch(`${backendUrl}/api/blogs`, { cache: 'no-store' });
+    const data = await res.json();
+    return data.data || [];
+  } catch (err) {
+    console.error("Failed to fetch blogs from backend:", err);
+    return [];
+  }
 };

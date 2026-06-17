@@ -1,7 +1,8 @@
-import { connectToDb } from "@/lib/db";
 import { auth } from "@/lib/auth";
 import { headers } from "next/headers";
 import { NextResponse } from "next/server";
+
+const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "https://skillsphereonlinelearningplatform-s.vercel.app";
 
 export async function POST(request) {
   try {
@@ -9,7 +10,7 @@ export async function POST(request) {
       headers: await headers()
     });
 
-    if (!session || !session.user) {
+    if (!session || !session.user || !session.session) {
       return NextResponse.json(
         { success: false, error: "Unauthorized. Please log in." },
         { status: 401 }
@@ -24,40 +25,19 @@ export async function POST(request) {
       );
     }
 
-    const db = await connectToDb();
-    const enrollmentsCol = db.collection("enrollments");
-
-    // Check if already enrolled
-    const existingEnrollment = await enrollmentsCol.findOne({
-      userId: session.user.id,
-      courseId: courseId
+    const res = await fetch(`${backendUrl}/api/enroll`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${session.session.token}`
+      },
+      body: JSON.stringify({ courseId })
     });
 
-    if (existingEnrollment) {
-      return NextResponse.json({
-        success: true,
-        message: "Already enrolled in this course.",
-        data: existingEnrollment
-      });
-    }
-
-    const newEnrollment = {
-      userId: session.user.id,
-      courseId: courseId,
-      progress: 0,
-      lastActive: "Just now",
-      enrolledAt: new Date()
-    };
-
-    const result = await enrollmentsCol.insertOne(newEnrollment);
-
-    return NextResponse.json({
-      success: true,
-      message: "Successfully enrolled in course.",
-      data: { ...newEnrollment, _id: result.insertedId.toString() }
-    });
+    const data = await res.json();
+    return NextResponse.json(data);
   } catch (error) {
-    console.error("Failed to enroll in course:", error);
+    console.error("Failed to proxy enroll course:", error);
     return NextResponse.json(
       { success: false, error: "Internal Server Error" },
       { status: 500 }
