@@ -1,15 +1,85 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoTimer } from "react-icons/io5";
 import { SiLevelsdotfyi } from "react-icons/si";
 import { RiGlobalLine } from "react-icons/ri";
 import { GrCertificate } from "react-icons/gr";
+import { authClient } from "@/lib/auth-client";
+import { toast, Toast } from "@heroui/react";
 
 const CourseDetailsClient = ({ course }) => {
   const [activeModule, setActiveModule] = useState(0);
+  const [isEnrolled, setIsEnrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  const session = authClient.useSession();
+  const user = session?.data?.user;
+
+  useEffect(() => {
+    if (user && course) {
+      fetch("/api/enrollments")
+        .then(res => res.json())
+        .then(data => {
+          if (data.success) {
+            const enrolled = data.data.some(c => c.id === course.id);
+            setIsEnrolled(enrolled);
+          }
+        })
+        .catch(err => console.error("Error loading enrollment status:", err));
+    }
+  }, [user, course]);
+
+  const handleEnroll = async () => {
+    if (!user) {
+      toast.warning("Please log in to enroll in this course.", {
+        actionProps: {
+          children: "Login",
+          className: "bg-warning text-warning-foreground",
+          onClick: () => router.push("/login")
+        },
+        description: "Registration required"
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const res = await fetch("/api/enroll", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ courseId: course.id })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setIsEnrolled(true);
+        toast.success("Successfully enrolled in this course!", {
+          actionProps: {
+            children: "Go to Profile",
+            className: "bg-success text-success-foreground",
+            onClick: () => router.push("/profile")
+          },
+          description: `You are now learning: ${course.title}`
+        });
+      } else {
+        toast.warning(data.error || "Enrollment failed. Try again.", {
+          actionProps: { children: "Close" }
+        });
+      }
+    } catch (err) {
+      console.error("Enrollment error:", err);
+      toast.error("Failed to enroll due to a network error.", {
+        actionProps: { children: "Close" }
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const curriculumData = [
     {
@@ -281,8 +351,12 @@ const CourseDetailsClient = ({ course }) => {
 
               {/* Action buttons */}
               <div className="space-y-3">
-                <button className="w-full bg-primary text-white hover:bg-primary/95 hover:scale-[1.02] active:scale-98 transition-all py-4 rounded-full font-label font-bold text-base shadow-md shadow-primary/10 cursor-pointer">
-                  Enroll in Course
+                <button
+                  onClick={isEnrolled ? () => router.push("/profile") : handleEnroll}
+                  disabled={isLoading}
+                  className="w-full bg-primary text-white hover:bg-primary/95 hover:scale-[1.02] active:scale-98 transition-all py-4 rounded-full font-label font-bold text-base shadow-md shadow-primary/10 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
+                >
+                  {isLoading ? "Enrolling..." : isEnrolled ? "Resume Learning" : "Enroll in Course"}
                 </button>
                 <button className="w-full border border-outline-variant/30 text-on-surface hover:bg-surface-container-low hover:scale-[1.02] active:scale-98 transition-all py-4 rounded-full font-label font-bold text-base cursor-pointer">
                   Buy as Gift
@@ -343,6 +417,7 @@ const CourseDetailsClient = ({ course }) => {
         </div>
 
       </div>
+      <Toast.Provider />
     </div>
   );
 };

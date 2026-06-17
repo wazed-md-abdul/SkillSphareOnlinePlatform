@@ -58,33 +58,30 @@ const UserCard = () => {
   ];
   const maxHours = 12;
 
-  // Enrolled courses list mockup
-  const enrolledCourses = [
-    {
-      id: "course-001",
-      title: "Visual Systems & Brand Architecture",
-      progress: 75,
-      lastActive: "2 hours ago",
-      imageUrl: "https://i.ibb.co/8C8X4LT/visual-systems.png",
-      category: "Design Strategy"
-    },
-    {
-      id: "course-002",
-      title: "Scalable Frontend Architecture",
-      progress: 12,
-      lastActive: "Yesterday",
-      imageUrl: "https://i.ibb.co/cKRb46g6/frontend-arch.png",
-      category: "Engineering"
-    },
-    {
-      id: "course-003",
-      title: "The Psychology of Interaction",
-      progress: 100,
-      lastActive: "3 days ago",
-      imageUrl: "https://i.ibb.co/CNpKPnL/the-psychology.png",
-      category: "Creative Mindset"
+  const [enrolledCourses, setEnrolledCourses] = useState([]);
+  const [loadingEnrollments, setLoadingEnrollments] = useState(true);
+
+  useEffect(() => {
+    if (user) {
+      setLoadingEnrollments(true);
+      fetch("/api/enrollments")
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.success) {
+            setEnrolledCourses(data.data);
+          }
+        })
+        .catch((err) => console.error("Error loading enrolled courses:", err))
+        .finally(() => setLoadingEnrollments(false));
+    } else {
+      setEnrolledCourses([]);
+      setLoadingEnrollments(false);
     }
-  ];
+  }, [user]);
+
+  const completedCount = enrolledCourses.filter(c => c.progress === 100).length;
+  const hoursLearned = enrolledCourses.reduce((acc, c) => acc + Math.round((c.progress / 100) * (parseInt(c.duration) || 120)), 0);
+  const avgProgress = enrolledCourses.length > 0 ? Math.round(enrolledCourses.reduce((acc, c) => acc + c.progress, 0) / enrolledCourses.length) : 0;
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-12 min-h-screen relative overflow-hidden pb-32">
@@ -132,15 +129,15 @@ const UserCard = () => {
             {/* Quick Stats */}
             <div className="w-full flex justify-around py-4 border-y border-outline-variant/10 mb-6">
               <div className="text-center">
-                <p className="text-lg font-display font-bold text-on-surface">3</p>
+                <p className="text-lg font-display font-bold text-on-surface">{enrolledCourses.length}</p>
                 <p className="text-[10px] font-label font-bold uppercase tracking-wider text-outline">Enrolled</p>
               </div>
               <div className="text-center">
-                <p className="text-lg font-display font-bold text-on-surface">1</p>
+                <p className="text-lg font-display font-bold text-on-surface">{completedCount}</p>
                 <p className="text-[10px] font-label font-bold uppercase tracking-wider text-outline">Certificates</p>
               </div>
               <div className="text-center">
-                <p className="text-lg font-display font-bold text-on-surface">54h</p>
+                <p className="text-lg font-display font-bold text-on-surface">{hoursLearned}h</p>
                 <p className="text-[10px] font-label font-bold uppercase tracking-wider text-outline">Learnt</p>
               </div>
             </div>
@@ -240,7 +237,7 @@ const UserCard = () => {
               className="bg-surface-container-lowest border border-outline-variant/10 p-5 rounded-2xl shadow-sm text-left"
             >
               <IoSchoolOutline className="text-primary text-2xl mb-2" />
-              <p className="text-2xl font-display font-bold text-on-surface">3</p>
+              <p className="text-2xl font-display font-bold text-on-surface">{enrolledCourses.length}</p>
               <p className="text-xs text-outline font-semibold uppercase tracking-wider mt-0.5">Enrolled</p>
             </motion.div>
 
@@ -251,7 +248,7 @@ const UserCard = () => {
               className="bg-surface-container-lowest border border-outline-variant/10 p-5 rounded-2xl shadow-sm text-left"
             >
               <IoTimeOutline className="text-primary text-2xl mb-2" />
-              <p className="text-2xl font-display font-bold text-on-surface">54h</p>
+              <p className="text-2xl font-display font-bold text-on-surface">{hoursLearned}h</p>
               <p className="text-xs text-outline font-semibold uppercase tracking-wider mt-0.5">Study Hours</p>
             </motion.div>
 
@@ -262,7 +259,7 @@ const UserCard = () => {
               className="bg-surface-container-lowest border border-outline-variant/10 p-5 rounded-2xl shadow-sm text-left"
             >
               <IoTrophyOutline className="text-primary text-2xl mb-2" />
-              <p className="text-2xl font-display font-bold text-on-surface">1</p>
+              <p className="text-2xl font-display font-bold text-on-surface">{completedCount}</p>
               <p className="text-xs text-outline font-semibold uppercase tracking-wider mt-0.5">Certificates</p>
             </motion.div>
 
@@ -273,7 +270,7 @@ const UserCard = () => {
               className="bg-surface-container-lowest border border-outline-variant/10 p-5 rounded-2xl shadow-sm text-left"
             >
               <span className="material-symbols-outlined text-primary text-2xl mb-2">trending_up</span>
-              <p className="text-2xl font-display font-bold text-on-surface">92%</p>
+              <p className="text-2xl font-display font-bold text-on-surface">{avgProgress}%</p>
               <p className="text-xs text-outline font-semibold uppercase tracking-wider mt-0.5">Avg Progress</p>
             </motion.div>
           </div>
@@ -326,66 +323,87 @@ const UserCard = () => {
             </h3>
             
             <div className="space-y-4">
-              {enrolledCourses.map((courseItem, idx) => (
-                <motion.div 
-                  key={idx}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className="flex flex-col md:flex-row gap-5 p-5 border border-outline-variant/15 rounded-2xl bg-surface-container-lowest shadow-sm hover:border-outline-variant/30 transition-all items-center"
-                >
-                  <img 
-                    src={courseItem.imageUrl} 
-                    alt={courseItem.title} 
-                    className="w-full md:w-32 aspect-video object-cover rounded-xl border border-outline-variant/10 shadow-sm"
-                  />
-                  <div className="flex-1 space-y-3 w-full">
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <span className="bg-primary/5 text-primary text-[9px] font-label font-bold px-2 py-0.5 rounded border border-primary/10 uppercase tracking-wider">
-                          {courseItem.category}
-                        </span>
-                        <h4 className="font-display font-bold text-on-surface text-base md:text-lg mt-1.5 leading-snug">
-                          {courseItem.title}
-                        </h4>
+              {loadingEnrollments ? (
+                <div className="flex justify-center py-12">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                </div>
+              ) : enrolledCourses.length === 0 ? (
+                <div className="text-center p-12 border border-dashed border-outline-variant/30 rounded-3xl bg-surface-container-lowest/50">
+                  <span className="material-symbols-outlined text-5xl text-outline mb-4">school</span>
+                  <h4 className="text-lg font-display font-bold text-on-surface mb-2">Your Pathway is Empty</h4>
+                  <p className="text-sm text-on-surface-variant max-w-sm mx-auto mb-6">
+                    You haven't enrolled in any courses yet. Browse our curated masterclasses to get started.
+                  </p>
+                  <Link 
+                    href="/allcourses" 
+                    className="inline-flex items-center gap-2 bg-primary text-white hover:bg-primary/95 hover:scale-[1.02] active:scale-98 transition-all px-6 py-3 rounded-full font-label font-bold text-sm shadow-md cursor-pointer"
+                  >
+                    Browse Courses
+                    <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </Link>
+                </div>
+              ) : (
+                enrolledCourses.map((courseItem, idx) => (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: idx * 0.05 }}
+                    className="flex flex-col md:flex-row gap-5 p-5 border border-outline-variant/15 rounded-2xl bg-surface-container-lowest shadow-sm hover:border-outline-variant/30 transition-all items-center"
+                  >
+                    <img 
+                      src={courseItem.imageUrl} 
+                      alt={courseItem.title} 
+                      className="w-full md:w-32 aspect-video object-cover rounded-xl border border-outline-variant/10 shadow-sm"
+                    />
+                    <div className="flex-1 space-y-3 w-full">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <span className="bg-primary/5 text-primary text-[9px] font-label font-bold px-2 py-0.5 rounded border border-primary/10 uppercase tracking-wider">
+                            {courseItem.category}
+                          </span>
+                          <h4 className="font-display font-bold text-on-surface text-base md:text-lg mt-1.5 leading-snug">
+                            {courseItem.title}
+                          </h4>
+                        </div>
+                        {courseItem.progress === 100 && (
+                          <span className="flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-green-200">
+                            <span className="material-symbols-outlined text-xs fill-icon">check_circle</span>
+                            Completed
+                          </span>
+                        )}
                       </div>
-                      {courseItem.progress === 100 && (
-                        <span className="flex items-center gap-1 bg-green-50 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full border border-green-200">
-                          <span className="material-symbols-outlined text-xs fill-icon">check_circle</span>
-                          Completed
-                        </span>
-                      )}
-                    </div>
 
-                    {/* Progress Bar */}
-                    <div className="space-y-1">
-                      <div className="flex justify-between text-xs font-semibold text-on-surface-variant">
-                        <span>Progress</span>
-                        <span>{courseItem.progress}%</span>
+                      {/* Progress Bar */}
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-xs font-semibold text-on-surface-variant">
+                          <span>Progress</span>
+                          <span>{courseItem.progress}%</span>
+                        </div>
+                        <div className="w-full h-2 bg-primary-container/30 rounded-full overflow-hidden">
+                          <div className="h-full bg-primary rounded-full" style={{ width: `${courseItem.progress}%` }} />
+                        </div>
                       </div>
-                      <div className="w-full h-2 bg-primary-container/30 rounded-full overflow-hidden">
-                        <div className="h-full bg-primary rounded-full" style={{ width: `${courseItem.progress}%` }} />
+
+                      <div className="flex items-center justify-between gap-4 pt-1 text-xs">
+                        <span className="text-outline font-medium">Last active {courseItem.lastActive}</span>
+                        <Link 
+                          href={courseItem.progress === 100 ? "#" : `/details/${courseItem.id}`}
+                          className={`font-label font-bold px-4 py-2 rounded-full transition-all cursor-pointer ${
+                            courseItem.progress === 100 
+                              ? 'bg-green-600 hover:bg-green-700 text-white shadow-sm'
+                              : 'bg-primary hover:bg-primary/95 text-white shadow-sm'
+                          }`}
+                        >
+                          {courseItem.progress === 100 ? "Get Certificate" : "Resume Learning"}
+                        </Link>
                       </div>
-                    </div>
 
-                    <div className="flex items-center justify-between gap-4 pt-1 text-xs">
-                      <span className="text-outline font-medium">Last active {courseItem.lastActive}</span>
-                      <Link 
-                        href={courseItem.progress === 100 ? "#" : `/details/${courseItem.id}`}
-                        className={`font-label font-bold px-4 py-2 rounded-full transition-all cursor-pointer ${
-                          courseItem.progress === 100 
-                            ? 'bg-green-600 hover:bg-green-700 text-white shadow-sm'
-                            : 'bg-primary hover:bg-primary/95 text-white shadow-sm'
-                        }`}
-                      >
-                        {courseItem.progress === 100 ? "Get Certificate" : "Resume Learning"}
-                      </Link>
                     </div>
-
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                ))
+              )}
             </div>
           </motion.div>
 
